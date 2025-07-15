@@ -1,9 +1,0 @@
-WorkingExcelFilePath : C:\\Auto\\data\\TestData_omiga2.xls
-ExcelFilePath : C:\\Auto\\data\\TestData_omiga.xls
-outputJsonFilePath : C:\\Auto\\log\\data{str}.js
-outputJsonListFilePath : C:\\Auto\\log\\dataList.js
-outputReplace :  {str}
-ISInterctive : Y
-licenceKey: cDxMYP5cBlnJ624WXVL3zVeF7NDfLuNVWDatSp1TnmoxxXhxYeQNPu+OseOUkwPpCF4QVjFYAm0WQIn43VATchjE3UuEm96zD8/p4tJ2bdVBs5g=
-ImageFilePath : C:\\Auto\\Images
-DataSheetName: GData
