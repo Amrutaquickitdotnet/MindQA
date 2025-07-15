@@ -26,7 +26,6 @@
     }
 
     function logRequest(type, info) {
-        debugger;
            storeApiCall({
                type: type,
                method: info.method,
@@ -130,3 +129,5 @@
     });
 
 })(window);
+
+

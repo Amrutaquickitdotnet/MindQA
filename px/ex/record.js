@@ -27,10 +27,6 @@
 			
 		}
 	}
-
-
-
-
 	var otherEvent = [];
 	var isStoop = false;
 	function GetDataXPathZeroCodeDummy12345678(element) {
@@ -123,9 +119,6 @@
 
 		return pathSegments.length ? '/' + pathSegments.reverse().join('/') : '';
 	}
-
-
-
 	function GetDataXPathZeroCodeDummy12345678NoId(element) {
 		let a = element;
 
@@ -220,8 +213,6 @@
 
 		return pathSegments.length ? '/' + pathSegments.reverse().join('/') : '';
 	}
-
-
 	function getDateValueZeroCodeDummy12345678() {
 
 		function twoDigit(val) {
@@ -472,12 +463,97 @@
 		});
 	});
 
-	observer.observe(document.body, {
-		childList: true,
-		subtree: true
+	try {
+		observer.observe(document.body, {
+			childList: true,
+			subtree: true
+		});
+	} catch {
+
+	}
+	
+
+
+})();
+
+
+
+(function () {
+	const originalConsole = {
+		log: console.log,
+		info: console.info,
+		warn: console.warn,
+		error: console.error,
+		debug: console.debug
+	};
+
+	const logHistory = [];
+
+	function storeApiCall(data) {
+		try {
+
+			var pageUrl = window.location.href;
+			data.pageUrl = pageUrl;
+			var existing = JSON.parse(localStorage.getItem('consoleDataCaptureListZeroCodeDummy12345678') || '[]');
+			existing.push(data);
+			if (existing) {
+				const TEN_MINUTES = 2 * 60 * 1000; // 10 minutes in milliseconds
+				const now = Date.now();
+				existing = existing.filter((item) => {
+					const itemTime = new Date(item.timestamp).getTime();
+					return now - itemTime <= TEN_MINUTES;
+				});
+			}
+			localStorage.setItem('consoleDataCaptureListZeroCodeDummy12345678', JSON.stringify(existing));
+		} catch (err) {
+
+		}
+	}
+
+
+
+	function logInterceptor(type, args) {
+		const message = {
+			type,
+			timestamp: new Date().toISOString(),
+			Text: JSON.stringify(args)
+		};
+		storeApiCall(message);
+		try {
+			if (originalConsole[type] && type!="error") {
+				//originalConsole[type].apply(console, args);
+			}
+			
+		} catch {
+
+		}
+		
+	}
+
+	['log', 'info', 'warn', 'error', 'debug'].forEach(function (method) {
+		console[method] = function () {
+			logInterceptor(method, arguments);
+		};
 	});
 
+	// Capture uncaught errors
+	window.onerror = function (message, source, lineno, colno, error) {
+		console.error("Uncaught Exception:", {
+			message,
+			source,
+			lineno,
+			colno,
+			stack: error?.stack || "No stack"
+		});
+	};
 
+	// Capture unhandled promise rejections
+	window.addEventListener("unhandledrejection", function (event) {
+		console.error("Unhandled Promise Rejection:", {
+			reason: event.reason,
+			stack: event.reason?.stack || "No stack"
+		});
+	});
 })();
 
 

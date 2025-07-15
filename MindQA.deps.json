@@ -9,10 +9,12 @@
       "MindQA/1.0.0": {
         "dependencies": {
           "Castle.Core": "5.2.1",
-          "Database": "1.0.0",
-          "DynamicReadLibraryInterFace": "1.0.0",
           "FiddlerCore.Utilities": "1.20191.7809",
+          "MindQADatabase": "1.0.0",
+          "MindQAInterface": "1.0.0",
           "MindQAJob": "1.0.0",
+          "MindQAModel": "1.0.0",
+          "MindQAUICapture": "1.0.0",
           "MongoDB.Bson": "3.1.0",
           "MongoDB.Driver": "3.1.0",
           "NAudio": "2.2.1",
@@ -20,10 +22,12 @@
           "NAudio.Lame": "2.1.0",
           "System.Speech": "9.0.1",
           "Tesseract": "5.2.0",
-          "ZeroCodeModel": "1.0.0",
-          "ZeroCodeUICapture": "1.0.0",
           "Mind Support Run.Reference": "1.0.0.0",
-          "MindQAJob.Reference": "1.0.0.0"
+          "MindQADatabase.Reference": "1.0.0.0",
+          "MindQAInterface.Reference": "1.0.0.0",
+          "MindQAJob.Reference": "1.0.0.0",
+          "MindQAModel.Reference": "1.0.0.0",
+          "MindQAUICapture.Reference": "1.0.0.0"
         },
         "runtime": {
           "MindQA.dll": {}
@@ -1923,31 +1927,6 @@
           }
         }
       },
-      "Database/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0-rc.1.23419.6"
-        },
-        "runtime": {
-          "Database.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "DynamicReadLibraryInterFace/1.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Logging": "8.0.0-rc.1.23419.4",
-          "Selenium.Support": "4.11.0",
-          "Selenium.WebDriver": "4.11.0",
-          "ZeroCodeModel": "1.0.0"
-        },
-        "runtime": {
-          "DynamicReadLibraryInterFace.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "Mind Support Run/1.0.0": {
         "runtime": {
           "Mind Support Run.dll": {
@@ -1956,15 +1935,41 @@
           }
         }
       },
+      "MindQADatabase/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0-rc.1.23419.6"
+        },
+        "runtime": {
+          "MindQADatabase.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": ""
+          }
+        }
+      },
+      "MindQAInterface/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "8.0.0-rc.1.23419.4",
+          "MindQAModel": "1.0.0",
+          "Selenium.Support": "4.11.0",
+          "Selenium.WebDriver": "4.11.0"
+        },
+        "runtime": {
+          "MindQAInterface.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": ""
+          }
+        }
+      },
       "MindQAJob/1.0.0": {
         "dependencies": {
           "CS-Script.Core": "2.0.0",
-          "Database": "1.0.0",
           "DotNetCore.NPOI": "1.2.3",
-          "DynamicReadLibraryInterFace": "1.0.0",
           "ExtentReports.Core": "1.0.3",
           "Microsoft.EntityFrameworkCore": "8.0.0-rc.1.23419.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0-rc.1.23419.6",
+          "MindQADatabase": "1.0.0",
+          "MindQAInterface": "1.0.0",
+          "MindQAModel": "1.0.0",
           "MongoDB.Bson": "3.1.0",
           "MongoDB.Driver": "3.1.0",
           "NLog": "4.7.15",
@@ -1975,8 +1980,7 @@
           "Selenium.WebDriver.ChromeDriver": "135.0.7049.4200",
           "Selenium.WebDriver.MSEdgeDriver": "120.0.2210.144",
           "System.Speech": "9.0.1",
-          "Tesseract": "5.2.0",
-          "ZeroCodeModel": "1.0.0"
+          "Tesseract": "5.2.0"
         },
         "runtime": {
           "MindQAJob.dll": {
@@ -1985,19 +1989,19 @@
           }
         }
       },
-      "ZeroCodeModel/1.0.0": {
+      "MindQAModel/1.0.0": {
         "runtime": {
-          "ZeroCodeModel.dll": {
+          "MindQAModel.dll": {
             "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
+            "fileVersion": ""
           }
         }
       },
-      "ZeroCodeUICapture/1.0.0": {
+      "MindQAUICapture/1.0.0": {
         "runtime": {
-          "ZeroCodeUICapture.dll": {
+          "MindQAUICapture.dll": {
             "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
+            "fileVersion": ""
           }
         }
       },
@@ -2009,9 +2013,41 @@
           }
         }
       },
+      "MindQADatabase.Reference/1.0.0.0": {
+        "runtime": {
+          "MindQADatabase.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MindQAInterface.Reference/1.0.0.0": {
+        "runtime": {
+          "MindQAInterface.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "MindQAJob.Reference/1.0.0.0": {
         "runtime": {
           "MindQAJob.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MindQAModel.Reference/1.0.0.0": {
+        "runtime": {
+          "MindQAModel.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MindQAUICapture.Reference/1.0.0.0": {
+        "runtime": {
+          "MindQAUICapture.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -3292,17 +3328,17 @@
       "path": "zstdsharp.port/0.7.3",
       "hashPath": "zstdsharp.port.0.7.3.nupkg.sha512"
     },
-    "Database/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DynamicReadLibraryInterFace/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Mind Support Run/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MindQADatabase/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MindQAInterface/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -3312,12 +3348,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ZeroCodeModel/1.0.0": {
+    "MindQAModel/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "ZeroCodeUICapture/1.0.0": {
+    "MindQAUICapture/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -3327,7 +3363,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "MindQADatabase.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MindQAInterface.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
     "MindQAJob.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MindQAModel.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MindQAUICapture.Reference/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
