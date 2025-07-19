@@ -247,7 +247,7 @@
 		if (ele.tagName) {
 			steps = steps + "-" + (ele.tagName ? ele.tagName.toLowerCase() : "");
 			var name = "";
-			if (ele.tagName.toLowerCase() == "input" || ele.tagName.toLowerCase() == "select") {
+		//	if (ele.tagName.toLowerCase() == "input" || ele.tagName.toLowerCase() == "select") {
 				if (ele.getAttribute("name")) {
 					steps = steps + "-" + ele.getAttribute("name");
 					name = ele.getAttribute("name");
@@ -264,12 +264,12 @@
 					steps = steps + "-" + ele.getAttribute("title");
 					name = ele.getAttribute("title")
 				}  
-			}	
+			//}	
 			if (name != "") {
 				if (type == "sendkeys") {
-					return "User should send keys to " + name + ", on page " + page;
+					return "User should send keys to " + name + ", for " + page;
 				} else if (type == "click") {
-					return "User should click to " + name +", on page " + page;
+					return "User should click on " + name +", for " + page;
 				}
 			}
 			else if (type == "click") {
@@ -278,7 +278,7 @@
 					text = ele.textContent.trim().substr(0,20);
 				}
 
-				return "User should click to " + text + ", on page " + page;
+				return "User should click on " + text + ", for " + page;
 			}
 			if (ele.tagName.toLowerCase() == "label" || ele.tagName.toLowerCase() == "button") {
 				  
@@ -382,7 +382,7 @@
 					"TestCaseId": "1",
 					"TestStepId": runTimeScriptCountDataValue,
 					"TestCaseDataId": "1",
-					"Steps": "Launch url in the browser",
+					"Steps": "Navigate to the URL in the browser",
 					"ExecutedTime": getDateValueZeroCodeDummy12345678(),
 					"IsRun": false,
 					"LocatorType": "NA",

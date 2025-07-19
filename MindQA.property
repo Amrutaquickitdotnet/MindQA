@@ -1,9 +1,14 @@
-WorkingExcelFilePath : C:\\Auto\\data\\TestData_omiga2.xls
-ExcelFilePath : C:\\Auto\\data\\TestData_omiga.xls
-outputJsonFilePath : C:\\Auto\\log\\data{str}.js
-outputJsonListFilePath : C:\\Auto\\log\\dataList.js
-outputReplace :  {str}
-ISInterctive : Y
-licenceKey: vgk87!xzq#b2@%mjs4:dExMo8uEFZT+Px60weIv/DuoGJIDLqRqy65IByHINmLY5JadQOlX0bRsJAsjD6dZR/4kmVs5LbNA+oFrH1X9M1qflE/XjCLuYnSlusD4XKh1sJv8=mindqa
-ImageFilePath : C:\\Auto\\Images
-DataSheetName: GData
+# Application Configuration
+# Sat Jul 19 10:09:37 2025
+Itration=	2
+ISInterctive=Y
+outputJsonFilePath=C:\Auto\log\data{str}.js
+licenceKey=vgk87!xzq#b2@%mjs4:dExMo8uEFZT+Px60weIv/DuoGJIDLqRqy65IByHINmLY5JadQOlX0bRsJAsjD6dZR/4kmVs5LbNA+oFrH1X9M1qflE/XjCLuYnSlusD4XKh1sJv8=mindqa
+outputReplace={str}
+DataSheetName=GData
+WorkingExcelFilePath=C:\Auto\data\TestData_omiga2.xls
+ImageFilePath=C:\Auto\Images
+ExcelFilePath=C:\Auto\data\TestData_omiga.xls
+hideKey=password
+nonIdLocatorType=True
+outputJsonListFilePath=C:\Auto\log\dataList.js
