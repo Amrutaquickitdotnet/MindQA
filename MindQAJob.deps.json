@@ -22,10 +22,10 @@
           "NLog": "4.7.15",
           "Newtonsoft.Json": "13.0.3",
           "Noksa.WebDriver.ScreenshotsExtensions": "0.1.5.4",
-          "Selenium.Support": "4.11.0",
-          "Selenium.WebDriver": "4.11.0",
-          "Selenium.WebDriver.ChromeDriver": "135.0.7049.4200",
-          "Selenium.WebDriver.MSEdgeDriver": "120.0.2210.144",
+          "Selenium.Support": "4.34.0",
+          "Selenium.WebDriver": "4.34.0",
+          "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
+          "Selenium.WebDriver.GeckoDriver": "0.36.0",
           "System.Speech": "9.0.1",
           "Tesseract": "5.2.0",
           "MindQADatabase.Reference": "1.0.0.0",
@@ -920,8 +920,8 @@
         "dependencies": {
           "Magick.NET-Q8-AnyCPU": "7.9.0",
           "Newtonsoft.Json": "13.0.3",
-          "Selenium.Support": "4.11.0",
-          "Selenium.WebDriver": "4.11.0"
+          "Selenium.Support": "4.34.0",
+          "Selenium.WebDriver": "4.34.0"
         },
         "runtime": {
           "lib/netstandard2.0/WDSE.dll": {
@@ -1001,30 +1001,28 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
-      "Selenium.Support/4.11.0": {
+      "Selenium.Support/4.34.0": {
         "dependencies": {
-          "Selenium.WebDriver": "4.11.0"
+          "Selenium.WebDriver": "4.34.0"
         },
         "runtime": {
-          "lib/net6.0/WebDriver.Support.dll": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.0.0.0"
           }
         }
       },
-      "Selenium.WebDriver/4.11.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.3"
-        },
+      "Selenium.WebDriver/4.34.0": {
         "runtime": {
-          "lib/net6.0/WebDriver.dll": {
+          "lib/net8.0/WebDriver.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.0.0.0"
           }
         }
       },
-      "Selenium.WebDriver.ChromeDriver/135.0.7049.4200": {},
-      "Selenium.WebDriver.MSEdgeDriver/120.0.2210.144": {},
+      "Selenium.WebDriver.ChromeDriver/138.0.7204.15700": {},
+      "Selenium.WebDriver.GeckoDriver/0.36.0": {},
+      "Selenium.WebDriver.MSEdgeDriver/138.0.3351.83": {},
       "SharpCompress/0.30.1": {
         "runtime": {
           "lib/net5.0/SharpCompress.dll": {
@@ -1851,7 +1849,10 @@
       },
       "MindQADatabase/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0-rc.1.23419.6"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0-rc.1.23419.6",
+          "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
+          "Selenium.WebDriver.GeckoDriver": "0.36.0",
+          "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.83"
         },
         "runtime": {
           "MindQADatabase.dll": {
@@ -1865,8 +1866,11 @@
           "Guna.UI2.WinForms": "2.0.4.7",
           "Microsoft.Extensions.Logging": "8.0.0-rc.1.23419.4",
           "MindQAModel": "1.0.0",
-          "Selenium.Support": "4.11.0",
-          "Selenium.WebDriver": "4.11.0"
+          "Selenium.Support": "4.34.0",
+          "Selenium.WebDriver": "4.34.0",
+          "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
+          "Selenium.WebDriver.GeckoDriver": "0.36.0",
+          "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.83"
         },
         "runtime": {
           "MindQAInterface.dll": {
@@ -1876,6 +1880,10 @@
         }
       },
       "MindQAModel/1.0.0": {
+        "dependencies": {
+          "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
+          "Selenium.WebDriver.GeckoDriver": "0.36.0"
+        },
         "runtime": {
           "MindQAModel.dll": {
             "assemblyVersion": "1.0.0",
@@ -2461,33 +2469,40 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
     },
-    "Selenium.Support/4.11.0": {
+    "Selenium.Support/4.34.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PR7ssrG9peQ5AqPSNvOJ846FFOX1wSv5eV3/8zvYwf0jhNx2bEprBZbtYMSWtht+HXtC5xb6atRQLlpKD+FETQ==",
-      "path": "selenium.support/4.11.0",
-      "hashPath": "selenium.support.4.11.0.nupkg.sha512"
+      "sha512": "sha512-+GROvBcro1ayU9PlGu4Q6xGyRk+wlbwGrmL3lZqm+s6T+NVs0Fmp2r8t6DvKMY/ZaDh9svkvxqN808+EnFPhDw==",
+      "path": "selenium.support/4.34.0",
+      "hashPath": "selenium.support.4.34.0.nupkg.sha512"
     },
-    "Selenium.WebDriver/4.11.0": {
+    "Selenium.WebDriver/4.34.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-V8o+Nvi9/3Ix12ZzMGg+fI7sfu+HrflZkMGq8Orr+j0INbfpEEyM6KR9oaaHlm0WUXcn7dTYwyWrJxYsi6eniw==",
-      "path": "selenium.webdriver/4.11.0",
-      "hashPath": "selenium.webdriver.4.11.0.nupkg.sha512"
+      "sha512": "sha512-uNx+GF7WugHDPV2zpGDPlbSn3STQ6n0xFskFSeJdhEuuUTkIDfAsYnjVUiQidWDpy7mKzTz53ae7Thjghl3dng==",
+      "path": "selenium.webdriver/4.34.0",
+      "hashPath": "selenium.webdriver.4.34.0.nupkg.sha512"
     },
-    "Selenium.WebDriver.ChromeDriver/135.0.7049.4200": {
+    "Selenium.WebDriver.ChromeDriver/138.0.7204.15700": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jesl02IzPvgOTrlIZ9HWtKwdfbt5lkrtXo/9upGf1iDqptzttztgeFYN6a0/PHLZgVx8uK8aXaU+xYy0UKbz4w==",
-      "path": "selenium.webdriver.chromedriver/135.0.7049.4200",
-      "hashPath": "selenium.webdriver.chromedriver.135.0.7049.4200.nupkg.sha512"
+      "sha512": "sha512-TXuEqxz4dHy+Xp+C+lQJAqqAACO8EWP92l+wc5XtWBF5JQsF0Qua/aaGgeTnNYwnQLwJcsvMJJjSzyvXdCYQKA==",
+      "path": "selenium.webdriver.chromedriver/138.0.7204.15700",
+      "hashPath": "selenium.webdriver.chromedriver.138.0.7204.15700.nupkg.sha512"
     },
-    "Selenium.WebDriver.MSEdgeDriver/120.0.2210.144": {
+    "Selenium.WebDriver.GeckoDriver/0.36.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-thJB0cMYF9LcEsPIkqmVAWVIS/Yp0zc4A9518ZkmPuqlZaZhkKCAK7Sg279rl1RuBzEFOrv26yfPDMDpc5hzFw==",
-      "path": "selenium.webdriver.msedgedriver/120.0.2210.144",
-      "hashPath": "selenium.webdriver.msedgedriver.120.0.2210.144.nupkg.sha512"
+      "sha512": "sha512-jUdrPcwkVt8OJon4iWv6pNTPIAdViJYB9cbd4ct0Bt2RzPzynQiN8bBUfOA1iSxTppI9SH8L1eMfg5NRijlBsw==",
+      "path": "selenium.webdriver.geckodriver/0.36.0",
+      "hashPath": "selenium.webdriver.geckodriver.0.36.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver.MSEdgeDriver/138.0.3351.83": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0ftjNQPfmhqaCJbEl7vXoVvxfY512CGyAtG7BnB0Ems2fuAcHJDz4klBpDjSyldRqV7o3Eo610qL1+BdgxxAKQ==",
+      "path": "selenium.webdriver.msedgedriver/138.0.3351.83",
+      "hashPath": "selenium.webdriver.msedgedriver.138.0.3351.83.nupkg.sha512"
     },
     "SharpCompress/0.30.1": {
       "type": "package",
