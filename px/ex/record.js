@@ -188,11 +188,11 @@
 				break;
 			}
 
-			if (a && a.getAttribute('role')) {
-				segment = `${a.localName}[@role='${a.getAttribute('role')}']`;
-				pathSegments.push(segment);
-				break;
-			}
+			//if (a && a.getAttribute('role')) {
+			//	segment = `${a.localName}[@role='${a.getAttribute('role')}']`;
+			//	pathSegments.push(segment);
+			//	break;
+			//}
 
 
 
