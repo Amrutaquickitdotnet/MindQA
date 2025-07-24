@@ -13,7 +13,7 @@
 			//const existing = JSON.parse(localStorage.getItem('apiDataCaptureListZeroCodeDummy12345678') || '[]');
 			//existing.push(data);
 			if (dataArray) {
-				const TEN_MINUTES_MS = 2 *  1000;
+				const TEN_MINUTES_MS = 2 * 1000;
 				const now = Date.now();
 
 				dataArray = dataArray.filter(item => {
@@ -24,7 +24,7 @@
 				//console.log("Data stored in localStorage:", JSON.stringify(dataArray));
 			}
 		} catch (err) {
-			
+
 		}
 	}
 	var otherEvent = [];
@@ -33,7 +33,7 @@
 		let a = element;
 
 		// Special case for span or li: use text() selector
-		
+
 
 		if (a && a.id) {
 			return `//${a.localName}[@id='${a.id}']`;
@@ -188,11 +188,11 @@
 				break;
 			}
 
-			if (a && a.getAttribute('role')) {
-				segment = `${a.localName}[@role='${a.getAttribute('role')}']`;
-				pathSegments.push(segment);
-				break;
-			}
+			//if (a && a.getAttribute('role')) {
+			//	segment = `${a.localName}[@role='${a.getAttribute('role')}']`;
+			//	pathSegments.push(segment);
+			//	break;
+			//}
 
 
 
@@ -226,7 +226,7 @@
 		var dateVal = new Date()
 		return dateVal.getFullYear() + "-" + twoDigit(dateVal.getMonth() + 1) + "-" + twoDigit(dateVal.getDate()) + "-" + twoDigit(dateVal.getHours()) + "-" + twoDigit(dateVal.getMinutes()) + "-" + twoDigit(dateVal.getSeconds());
 	}
-	function getStepsZeroCodeDummy12345678(ele,type) {
+	function getStepsZeroCodeDummy12345678(ele, type) {
 		var steps = "";
 		var page = "";
 		if (document.title) {
@@ -247,41 +247,41 @@
 		if (ele.tagName) {
 			steps = steps + "-" + (ele.tagName ? ele.tagName.toLowerCase() : "");
 			var name = "";
-			if (ele.tagName.toLowerCase() == "input" || ele.tagName.toLowerCase() == "select") {
-				if (ele.getAttribute("name")) {
-					steps = steps + "-" + ele.getAttribute("name");
-					name = ele.getAttribute("name");
-				}
-				else if (ele.getAttribute("placeholder")) {
-					steps = steps + "-" + ele.getAttribute("placeholder");
-					name = ele.getAttribute("placeholder");
-				}
-				else if (ele.getAttribute("id")) {
-					steps = steps + "-" + ele.getAttribute("id");
-					name = ele.getAttribute("id")
-				}
-				else if (ele.getAttribute("title")) {
-					steps = steps + "-" + ele.getAttribute("title");
-					name = ele.getAttribute("title")
-				}  
-			}	
+			//	if (ele.tagName.toLowerCase() == "input" || ele.tagName.toLowerCase() == "select") {
+			if (ele.getAttribute("name")) {
+				steps = steps + "-" + ele.getAttribute("name");
+				name = ele.getAttribute("name");
+			}
+			else if (ele.getAttribute("placeholder")) {
+				steps = steps + "-" + ele.getAttribute("placeholder");
+				name = ele.getAttribute("placeholder");
+			}
+			else if (ele.getAttribute("id")) {
+				steps = steps + "-" + ele.getAttribute("id");
+				name = ele.getAttribute("id")
+			}
+			else if (ele.getAttribute("title")) {
+				steps = steps + "-" + ele.getAttribute("title");
+				name = ele.getAttribute("title")
+			}
+			//}	
 			if (name != "") {
 				if (type == "sendkeys") {
-					return "User should send keys to " + name + ", on page " + page;
+					return "User should send keys to " + name + ", for " + page;
 				} else if (type == "click") {
-					return "User should click to " + name +", on page " + page;
+					return "User should click on " + name + ", for " + page;
 				}
 			}
 			else if (type == "click") {
 				var text = "";
 				if (ele.textContent) {
-					text = ele.textContent.trim().substr(0,20);
+					text = ele.textContent.trim().substr(0, 20);
 				}
 
-				return "User should click to " + text + ", on page " + page;
+				return "User should click on " + text + ", for " + page;
 			}
 			if (ele.tagName.toLowerCase() == "label" || ele.tagName.toLowerCase() == "button") {
-				  
+
 
 				steps = steps + "-" + ele.textContent;
 			}
@@ -295,7 +295,7 @@
 		}
 		setTimeout(() => {
 			var xpath = GetDataXPathZeroCodeDummy12345678(ele.target);
-			var xpathWithoutId = GetDataXPathZeroCodeDummy12345678NoId (ele.target);
+			var xpathWithoutId = GetDataXPathZeroCodeDummy12345678NoId(ele.target);
 			if (xpath && !xpath.startsWith("//")) {
 				xpath = "/" + xpath;
 			}
@@ -338,7 +338,7 @@
 				dataCaptureListZeroCodeDummy12345678[runTimeScriptCountDataValue].ExecutedTime = getDateValueZeroCodeDummy12345678();
 			}
 			else if (type == "click" && dataCaptureListZeroCodeDummy12345678[runTimeScriptCountDataValue] && dataCaptureListZeroCodeDummy12345678[runTimeScriptCountDataValue].LocatorTypeValue === xpath && dataCaptureListZeroCodeDummy12345678[runTimeScriptCountDataValue].Action == type) {
-				 dataCaptureListZeroCodeDummy12345678[runTimeScriptCountDataValue].Value = ele.target.value ? ele.target.value : "";
+				dataCaptureListZeroCodeDummy12345678[runTimeScriptCountDataValue].Value = ele.target.value ? ele.target.value : "";
 				dataCaptureListZeroCodeDummy12345678[runTimeScriptCountDataValue].ExecutedTime = getDateValueZeroCodeDummy12345678();
 			} else {
 
@@ -382,7 +382,7 @@
 					"TestCaseId": "1",
 					"TestStepId": runTimeScriptCountDataValue,
 					"TestCaseDataId": "1",
-					"Steps": "Launch url in the browser",
+					"Steps": "Navigate to the URL in the browser",
 					"ExecutedTime": getDateValueZeroCodeDummy12345678(),
 					"IsRun": false,
 					"LocatorType": "NA",
@@ -471,7 +471,7 @@
 	} catch {
 
 	}
-	
+
 
 
 })();
@@ -520,11 +520,14 @@
 		};
 		storeApiCall(message);
 		try {
-			originalConsole[type].apply(console, args);
+			if (originalConsole[type] && type != "error") {
+				//originalConsole[type].apply(console, args);
+			}
+
 		} catch {
 
 		}
-		
+
 	}
 
 	['log', 'info', 'warn', 'error', 'debug'].forEach(function (method) {
@@ -535,7 +538,7 @@
 
 	// Capture uncaught errors
 	window.onerror = function (message, source, lineno, colno, error) {
-		console.error("", {
+		console.error("Uncaught Exception:", {
 			message,
 			source,
 			lineno,
@@ -546,12 +549,148 @@
 
 	// Capture unhandled promise rejections
 	window.addEventListener("unhandledrejection", function (event) {
-		console.error("", {
+		console.error("Unhandled Promise Rejection:", {
 			reason: event.reason,
 			stack: event.reason?.stack || "No stack"
 		});
 	});
 })();
+
+
+var requestData = [];
+
+(function (global) {
+	if (global.__NETWORK_TRACKER_PRO__) return;
+	global.__NETWORK_TRACKER_PRO__ = true;
+
+	function storeApiCall(data) {
+		try {
+
+			var pageUrl = window.location.href;
+			data.pageUrl = pageUrl;
+			var existing = JSON.parse(localStorage.getItem('apiDataCaptureListZeroCodeDummy12345678') || '[]');
+			existing.push(data);
+			if (existing) {
+				const TEN_MINUTES = 10 * 60 * 1000; // 10 minutes in milliseconds
+				const now = Date.now();
+				existing = existing.filter((item) => {
+					const itemTime = new Date(item.timestamp).getTime();
+					return now - itemTime <= TEN_MINUTES;
+				});
+			}
+			localStorage.setItem('apiDataCaptureListZeroCodeDummy12345678', JSON.stringify(existing));
+		} catch (err) {
+
+		}
+	}
+
+	function logRequest(type, info) {
+		storeApiCall({
+			type: type,
+			method: info.method,
+			url: info.url,
+			headers: JSON.stringify(info.headers),
+			body: info.body,
+			timestamp: new Date().toISOString(),
+			duration: info.duration,
+			status: info.status,
+			response: JSON.stringify(info.response),
+			error: JSON.stringify(info.error)
+		});
+
+	}
+
+	// ========== XMLHttpRequest Tracking ==========
+	const originalXHROpen = XMLHttpRequest.prototype.open;
+	const originalXHRSend = XMLHttpRequest.prototype.send;
+	const originalXHRSetRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
+
+	XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
+		this._trackInfo = {
+			method,
+			url,
+			headers: {},
+			startTime: Date.now()
+		};
+		return originalXHROpen.apply(this, arguments);
+	};
+
+	XMLHttpRequest.prototype.setRequestHeader = function (header, value) {
+		if (this._trackInfo) {
+			this._trackInfo.headers[header] = value;
+		}
+		return originalXHRSetRequestHeader.apply(this, arguments);
+	};
+
+	XMLHttpRequest.prototype.send = function (body) {
+		if (this._trackInfo) {
+			this._trackInfo.body = body;
+		}
+
+		this.addEventListener('loadend', function () {
+			const duration = Date.now() - this._trackInfo.startTime;
+			const info = {
+				...this._trackInfo,
+				status: this.status,
+				duration,
+				response: this.responseText
+			};
+			logRequest('XHR', info);
+		});
+
+		this.addEventListener('error', function () {
+			const info = {
+				...this._trackInfo,
+				error: 'Network Error'
+			};
+			logRequest('XHR', info);
+		});
+
+		return originalXHRSend.apply(this, arguments);
+	};
+
+	// ========== fetch Tracking ==========
+	const originalFetch = global.fetch;
+
+	global.fetch = new Proxy(originalFetch, {
+		apply: function (target, thisArg, args) {
+			const [resource, config = {}] = args;
+			const info = {
+				method: config.method || 'GET',
+				url: (typeof resource === 'string') ? resource : resource.url,
+				headers: config.headers || {},
+				body: config.body,
+				startTime: Date.now()
+			};
+
+			return Reflect.apply(target, thisArg, args)
+				.then(response => {
+					const clonedResponse = response.clone();
+					return clonedResponse.text().then(data => {
+						const duration = Date.now() - info.startTime;
+						logRequest('fetch', {
+							...info,
+							status: response.status,
+							duration,
+							response: data
+						});
+						return response;
+					});
+				})
+				.catch(error => {
+					logRequest('fetch', {
+						...info,
+						error: error.message || error
+					});
+					throw error;
+				});
+		}
+	});
+
+})(window);
+
+
+
 
 
 
