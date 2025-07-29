@@ -13,7 +13,7 @@
 			//const existing = JSON.parse(localStorage.getItem('apiDataCaptureListZeroCodeDummy12345678') || '[]');
 			//existing.push(data);
 			if (dataArray) {
-				const TEN_MINUTES_MS = 2 * 1000;
+				const TEN_MINUTES_MS = 10 * 1000; //10 seconds
 				const now = Date.now();
 
 				dataArray = dataArray.filter(item => {
@@ -464,10 +464,13 @@
 	});
 
 	try {
-		observer.observe(document.body, {
-			childList: true,
-			subtree: true
-		});
+		setTimeout(() => {
+			observer.observe(document.body, {
+				childList: true,
+				subtree: true
+			});
+		}, 1000);
+		
 	} catch {
 
 	}
@@ -487,8 +490,6 @@
 		debug: console.debug
 	};
 
-	const logHistory = [];
-
 	function storeApiCall(data) {
 		try {
 
@@ -497,7 +498,7 @@
 			var existing = JSON.parse(localStorage.getItem('consoleDataCaptureListZeroCodeDummy12345678') || '[]');
 			existing.push(data);
 			if (existing) {
-				const TEN_MINUTES = 2 * 60 * 1000; // 10 minutes in milliseconds
+				const TEN_MINUTES = 10 * 1000; // 10 seconds in milliseconds
 				const now = Date.now();
 				existing = existing.filter((item) => {
 					const itemTime = new Date(item.timestamp).getTime();
@@ -557,7 +558,8 @@
 })();
 
 
-var requestData = [];
+
+var requestDataMindQA01234 = [];
 
 (function (global) {
 	if (global.__NETWORK_TRACKER_PRO__) return;
@@ -565,19 +567,19 @@ var requestData = [];
 
 	function storeApiCall(data) {
 		try {
-
 			var pageUrl = window.location.href;
 			data.pageUrl = pageUrl;
 			var existing = JSON.parse(localStorage.getItem('apiDataCaptureListZeroCodeDummy12345678') || '[]');
 			existing.push(data);
 			if (existing) {
-				const TEN_MINUTES = 10 * 60 * 1000; // 10 minutes in milliseconds
+				const TEN_MINUTES = 3 * 1000; // 2 minutes in milliseconds
 				const now = Date.now();
 				existing = existing.filter((item) => {
 					const itemTime = new Date(item.timestamp).getTime();
 					return now - itemTime <= TEN_MINUTES;
 				});
 			}
+			requestDataMindQA01234 = existing;
 			localStorage.setItem('apiDataCaptureListZeroCodeDummy12345678', JSON.stringify(existing));
 		} catch (err) {
 
@@ -585,6 +587,7 @@ var requestData = [];
 	}
 
 	function logRequest(type, info) {
+		// requestData.push({ type, ...info });
 		storeApiCall({
 			type: type,
 			method: info.method,
@@ -597,7 +600,6 @@ var requestData = [];
 			response: JSON.stringify(info.response),
 			error: JSON.stringify(info.error)
 		});
-
 	}
 
 	// ========== XMLHttpRequest Tracking ==========
@@ -605,7 +607,7 @@ var requestData = [];
 	const originalXHRSend = XMLHttpRequest.prototype.send;
 	const originalXHRSetRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
 
-	XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
+	XMLHttpRequest.prototype.open = function (method, url) {
 		this._trackInfo = {
 			method,
 			url,
@@ -623,69 +625,134 @@ var requestData = [];
 	};
 
 	XMLHttpRequest.prototype.send = function (body) {
-		if (this._trackInfo) {
-			this._trackInfo.body = body;
-		}
+		if (!this._trackInfo) return originalXHRSend.apply(this, arguments);
+		const trackInfo = this._trackInfo;
+		trackInfo.body = body;
 
-		this.addEventListener('loadend', function () {
-			const duration = Date.now() - this._trackInfo.startTime;
-			const info = {
-				...this._trackInfo,
-				status: this.status,
-				duration,
-				response: this.responseText
-			};
-			logRequest('XHR', info);
-		});
+		const handleCompletion = () => {
+			const duration = Date.now() - trackInfo.startTime;
+			const info = { ...trackInfo, duration };
 
-		this.addEventListener('error', function () {
-			const info = {
-				...this._trackInfo,
-				error: 'Network Error'
-			};
+			try {
+				info.response = (this.responseType === '' || this.responseType === 'text')
+					? this.responseText
+					: `[${this.responseType}]`;
+			} catch (e) {
+				info.response = null;
+			}
+
+			if (this.status === 0 || trackInfo.error) {
+				info.error = trackInfo.error || 'Network Error';
+			} else if (this.status >= 400) {
+				info.error = `HTTP Error: ${this.status}`;
+			}
+			info.status = this.status;
+
 			logRequest('XHR', info);
-		});
+		};
+
+		this.addEventListener('error', () => trackInfo.error = 'Network Error');
+		this.addEventListener('timeout', () => trackInfo.error = 'Timeout');
+		this.addEventListener('abort', () => trackInfo.error = 'Aborted');
+		this.addEventListener('loadend', handleCompletion);
 
 		return originalXHRSend.apply(this, arguments);
 	};
 
+
+	async function readStreamAsText(stream) {
+		const reader = stream.getReader();
+		const decoder = new TextDecoder();
+		let result = '';
+		let done, value;
+
+		while (true) {
+			({ done, value } = await reader.read());
+			if (done) break;
+			result += decoder.decode(value, { stream: true });
+		}
+
+		result += decoder.decode(); // flush any remaining bytes
+		return result;
+	}
+
 	// ========== fetch Tracking ==========
 	const originalFetch = global.fetch;
-
-	global.fetch = new Proxy(originalFetch, {
-		apply: function (target, thisArg, args) {
-			const [resource, config = {}] = args;
-			const info = {
-				method: config.method || 'GET',
-				url: (typeof resource === 'string') ? resource : resource.url,
-				headers: config.headers || {},
-				body: config.body,
-				startTime: Date.now()
-			};
-
-			return Reflect.apply(target, thisArg, args)
-				.then(response => {
-					const clonedResponse = response.clone();
-					return clonedResponse.text().then(data => {
-						const duration = Date.now() - info.startTime;
-						logRequest('fetch', {
-							...info,
-							status: response.status,
-							duration,
-							response: data
-						});
-						return response;
-					});
-				})
-				.catch(error => {
-					logRequest('fetch', {
-						...info,
-						error: error.message || error
-					});
-					throw error;
-				});
+	global.fetch = function (resource, config = {}) {
+		let isNoConfig = true;
+		if (JSON.stringify(config) == "{}") {
+			config = resource;
+			isNoConfig = false;
 		}
-	});
+		const startTime = Date.now();
+		const method = config.method || 'GET';
+		const url = typeof resource === 'string' ? resource : resource.url;
+		const headers = {};
+		if (config.headers) {
+			if (config.headers.forEach) {
+				config.headers.forEach((val, key) => headers[key] = val);
+			} else {
+				Object.assign(headers, config.headers);
+			}
+		}
+		const clonedRequest = config.clone();
+		if (!isNoConfig) {
+			config = {};
+		}
+		return originalFetch(resource, config)
+			.then(async response => {
+				const duration = Date.now() - startTime;
+				if (JSON.stringify(config) == "{}") {
+					config = resource;
+				}
+				const info = {
+					method,
+					url,
+					headers,
+					body: config.body,
+					status: response.status,
+					duration
+				};
+				if (clonedRequest.body && clonedRequest.body instanceof ReadableStream) {
+					try {
+						info.body = await readStreamAsText(clonedRequest.body);
+					} catch (e) {
+						info.body = '[Unreadable Stream]';
+					}
+				} else {
+					info.body = config.body || null;
+				}
+				if (!response.ok) {
+					info.error = `HTTP Error: ${response.status}`;
+				}
+
+				try {
+					const clone = response.clone();
+					info.response = await clone.text();
+					if (info.response && info.response.length > 1003) {
+						info.response = info.response.substring(0, 1000) + '...';
+					}					 
+				} catch (e) {
+					info.response = `[${response.type}]`;
+				}
+
+				logRequest('fetch', info);
+				return response;
+			})
+			.catch(error => {
+
+				logRequest('fetch', {
+					method,
+					url,
+					headers,
+					body: config.body,
+					error: error.message,
+					duration: Date.now() - startTime
+				});
+				throw error;
+			});
+	};
+
 
 })(window);
 
