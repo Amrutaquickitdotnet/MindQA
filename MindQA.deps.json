@@ -21,11 +21,12 @@
           "NAudio.Core": "2.2.1",
           "NAudio.Lame": "2.1.0",
           "Selenium.WebDriver": "4.34.0",
-          "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
+          "Selenium.WebDriver.ChromeDriver": "139.0.7258.6600",
           "Selenium.WebDriver.GeckoDriver": "0.36.0",
           "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.65",
           "System.Speech": "9.0.1",
           "Tesseract": "5.2.0",
+          "WebDriverBiDi": "0.0.26",
           "WebDriverManager": "2.17.6",
           "Mind Support Run.Reference": "1.0.0.0",
           "MindQADatabase.Reference": "1.0.0.0",
@@ -1144,7 +1145,7 @@
           }
         }
       },
-      "Selenium.WebDriver.ChromeDriver/138.0.7204.15700": {},
+      "Selenium.WebDriver.ChromeDriver/139.0.7258.6600": {},
       "Selenium.WebDriver.GeckoDriver/0.36.0": {},
       "Selenium.WebDriver.MSEdgeDriver/138.0.3351.65": {},
       "SharpCompress/0.30.1": {
@@ -1960,6 +1961,14 @@
           }
         }
       },
+      "WebDriverBiDi/0.0.26": {
+        "runtime": {
+          "lib/net8.0/WebDriverBiDi.dll": {
+            "assemblyVersion": "0.0.26.0",
+            "fileVersion": "0.0.26.0"
+          }
+        }
+      },
       "WebDriverManager/2.17.6": {
         "dependencies": {
           "AngleSharp": "1.1.2",
@@ -1985,15 +1994,15 @@
       "Mind Support Run/1.0.0": {
         "dependencies": {
           "Selenium.WebDriver": "4.34.0",
-          "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
+          "Selenium.WebDriver.ChromeDriver": "139.0.7258.6600",
           "Selenium.WebDriver.GeckoDriver": "0.36.0",
           "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.65",
+          "WebDriverBiDi": "0.0.26",
           "WebDriverManager": "2.17.6"
         },
         "runtime": {
           "Mind Support Run.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": ""
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -2001,15 +2010,15 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0-rc.1.23419.6",
           "Selenium.WebDriver": "4.34.0",
-          "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
+          "Selenium.WebDriver.ChromeDriver": "139.0.7258.6600",
           "Selenium.WebDriver.GeckoDriver": "0.36.0",
           "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.65",
+          "WebDriverBiDi": "0.0.26",
           "WebDriverManager": "2.17.6"
         },
         "runtime": {
           "MindQADatabase.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": ""
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -2020,15 +2029,15 @@
           "MindQAModel": "1.0.0",
           "Selenium.Support": "4.34.0",
           "Selenium.WebDriver": "4.34.0",
-          "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
+          "Selenium.WebDriver.ChromeDriver": "139.0.7258.6600",
           "Selenium.WebDriver.GeckoDriver": "0.36.0",
           "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.65",
+          "WebDriverBiDi": "0.0.26",
           "WebDriverManager": "2.17.6"
         },
         "runtime": {
           "MindQAInterface.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": ""
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -2050,47 +2059,47 @@
           "Noksa.WebDriver.ScreenshotsExtensions": "0.1.5.4",
           "Selenium.Support": "4.34.0",
           "Selenium.WebDriver": "4.34.0",
-          "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
+          "Selenium.WebDriver.ChromeDriver": "139.0.7258.6600",
           "Selenium.WebDriver.GeckoDriver": "0.36.0",
           "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.65",
           "System.Speech": "9.0.1",
           "Tesseract": "5.2.0",
+          "WebDriverBiDi": "0.0.26",
           "WebDriverManager": "2.17.6"
         },
         "runtime": {
           "MindQAJob.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": ""
+            "fileVersion": "0.0.0.0"
           }
         }
       },
       "MindQAModel/1.0.0": {
         "dependencies": {
           "Selenium.WebDriver": "4.34.0",
-          "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
+          "Selenium.WebDriver.ChromeDriver": "139.0.7258.6600",
           "Selenium.WebDriver.GeckoDriver": "0.36.0",
           "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.65",
+          "WebDriverBiDi": "0.0.26",
           "WebDriverManager": "2.17.6"
         },
         "runtime": {
           "MindQAModel.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": ""
+            "fileVersion": "0.0.0.0"
           }
         }
       },
       "MindQAUICapture/1.0.0": {
         "dependencies": {
           "Selenium.WebDriver": "4.34.0",
-          "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
+          "Selenium.WebDriver.ChromeDriver": "139.0.7258.6600",
           "Selenium.WebDriver.GeckoDriver": "0.36.0",
           "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.65",
+          "WebDriverBiDi": "0.0.26",
           "WebDriverManager": "2.17.6"
         },
         "runtime": {
           "MindQAUICapture.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": ""
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -2787,12 +2796,12 @@
       "path": "selenium.webdriver/4.34.0",
       "hashPath": "selenium.webdriver.4.34.0.nupkg.sha512"
     },
-    "Selenium.WebDriver.ChromeDriver/138.0.7204.15700": {
+    "Selenium.WebDriver.ChromeDriver/139.0.7258.6600": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TXuEqxz4dHy+Xp+C+lQJAqqAACO8EWP92l+wc5XtWBF5JQsF0Qua/aaGgeTnNYwnQLwJcsvMJJjSzyvXdCYQKA==",
-      "path": "selenium.webdriver.chromedriver/138.0.7204.15700",
-      "hashPath": "selenium.webdriver.chromedriver.138.0.7204.15700.nupkg.sha512"
+      "sha512": "sha512-+1ejDKtX6qHxzWZZEAlEpg5n0b7KlDoxNNat6XX/5p4h7LvCczjfcMRM6l7/Nt+U58BpZvXKyDxhaY/Kq+/j2w==",
+      "path": "selenium.webdriver.chromedriver/139.0.7258.6600",
+      "hashPath": "selenium.webdriver.chromedriver.139.0.7258.6600.nupkg.sha512"
     },
     "Selenium.WebDriver.GeckoDriver/0.36.0": {
       "type": "package",
@@ -3444,6 +3453,13 @@
       "sha512": "sha512-YB7feJlrTWSXtK8+WaCcseGSPK/1r2d2FWeKGyndlrPwYClrzTlCoHD4/oQEUjKafmpkWlhTZZ7pxiRJYZgj6w==",
       "path": "tesseract/5.2.0",
       "hashPath": "tesseract.5.2.0.nupkg.sha512"
+    },
+    "WebDriverBiDi/0.0.26": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YxRGdPBT/+zcKaxYOJd8Cf9S8WH9WaEwlrr0e82x1jV0C1fg9KhRnH5zJu5VkdLuqcg1IRsJhCXog7M39xpHfw==",
+      "path": "webdriverbidi/0.0.26",
+      "hashPath": "webdriverbidi.0.0.26.nupkg.sha512"
     },
     "WebDriverManager/2.17.6": {
       "type": "package",

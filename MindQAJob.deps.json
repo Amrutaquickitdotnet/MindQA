@@ -29,6 +29,7 @@
           "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.65",
           "System.Speech": "9.0.1",
           "Tesseract": "5.2.0",
+          "WebDriverBiDi": "0.0.26",
           "WebDriverManager": "2.17.6",
           "MindQADatabase.Reference": "1.0.0.0",
           "MindQAInterface.Reference": "1.0.0.0",
@@ -1848,6 +1849,14 @@
           }
         }
       },
+      "WebDriverBiDi/0.0.26": {
+        "runtime": {
+          "lib/net8.0/WebDriverBiDi.dll": {
+            "assemblyVersion": "0.0.26.0",
+            "fileVersion": "0.0.26.0"
+          }
+        }
+      },
       "WebDriverManager/2.17.6": {
         "dependencies": {
           "AngleSharp": "1.1.2",
@@ -1877,12 +1886,12 @@
           "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
           "Selenium.WebDriver.GeckoDriver": "0.36.0",
           "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.65",
+          "WebDriverBiDi": "0.0.26",
           "WebDriverManager": "2.17.6"
         },
         "runtime": {
           "MindQADatabase.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": ""
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -1896,12 +1905,12 @@
           "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
           "Selenium.WebDriver.GeckoDriver": "0.36.0",
           "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.65",
+          "WebDriverBiDi": "0.0.26",
           "WebDriverManager": "2.17.6"
         },
         "runtime": {
           "MindQAInterface.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": ""
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -1911,12 +1920,12 @@
           "Selenium.WebDriver.ChromeDriver": "138.0.7204.15700",
           "Selenium.WebDriver.GeckoDriver": "0.36.0",
           "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.65",
+          "WebDriverBiDi": "0.0.26",
           "WebDriverManager": "2.17.6"
         },
         "runtime": {
           "MindQAModel.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": ""
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -3169,6 +3178,13 @@
       "sha512": "sha512-YB7feJlrTWSXtK8+WaCcseGSPK/1r2d2FWeKGyndlrPwYClrzTlCoHD4/oQEUjKafmpkWlhTZZ7pxiRJYZgj6w==",
       "path": "tesseract/5.2.0",
       "hashPath": "tesseract.5.2.0.nupkg.sha512"
+    },
+    "WebDriverBiDi/0.0.26": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YxRGdPBT/+zcKaxYOJd8Cf9S8WH9WaEwlrr0e82x1jV0C1fg9KhRnH5zJu5VkdLuqcg1IRsJhCXog7M39xpHfw==",
+      "path": "webdriverbidi/0.0.26",
+      "hashPath": "webdriverbidi.0.0.26.nupkg.sha512"
     },
     "WebDriverManager/2.17.6": {
       "type": "package",
