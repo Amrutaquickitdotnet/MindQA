@@ -28,7 +28,6 @@
           "Tesseract": "5.2.0",
           "WebDriverBiDi": "0.0.26",
           "WebDriverManager": "2.17.6",
-          "Mind Support Run.Reference": "1.0.0.0",
           "MindQADatabase.Reference": "1.0.0.0",
           "MindQAInterface.Reference": "1.0.0.0",
           "MindQAJob.Reference": "1.0.0.0",
@@ -1991,21 +1990,6 @@
           }
         }
       },
-      "Mind Support Run/1.0.0": {
-        "dependencies": {
-          "Selenium.WebDriver": "4.34.0",
-          "Selenium.WebDriver.ChromeDriver": "139.0.7258.6600",
-          "Selenium.WebDriver.GeckoDriver": "0.36.0",
-          "Selenium.WebDriver.MSEdgeDriver": "138.0.3351.65",
-          "WebDriverBiDi": "0.0.26",
-          "WebDriverManager": "2.17.6"
-        },
-        "runtime": {
-          "Mind Support Run.dll": {
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
       "MindQADatabase/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0-rc.1.23419.6",
@@ -2100,14 +2084,6 @@
         "runtime": {
           "MindQAUICapture.dll": {
             "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Mind Support Run.Reference/1.0.0.0": {
-        "runtime": {
-          "Mind Support Run.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -3475,11 +3451,6 @@
       "path": "zstdsharp.port/0.7.3",
       "hashPath": "zstdsharp.port.0.7.3.nupkg.sha512"
     },
-    "Mind Support Run/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "MindQADatabase/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -3502,11 +3473,6 @@
     },
     "MindQAUICapture/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Mind Support Run.Reference/1.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
