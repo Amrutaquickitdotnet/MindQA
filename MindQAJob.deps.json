@@ -12,6 +12,7 @@
           "DotNetCore.NPOI": "1.2.3",
           "ExtentReports.Core": "1.0.3",
           "Guna.UI2.WinForms": "2.0.4.7",
+          "InputSimulator": "1.0.4",
           "Microsoft.EntityFrameworkCore": "8.0.0-rc.1.23419.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0-rc.1.23419.6",
           "MindQADatabase": "1.0.0",
@@ -181,6 +182,14 @@
           "lib/net7.0-windows7.0/Guna.UI2.dll": {
             "assemblyVersion": "2.0.4.7",
             "fileVersion": "2.0.4.7"
+          }
+        }
+      },
+      "InputSimulator/1.0.4": {
+        "runtime": {
+          "lib/net20/WindowsInput.dll": {
+            "assemblyVersion": "1.0.4.0",
+            "fileVersion": "1.0.4.0"
           }
         }
       },
@@ -2037,6 +2046,13 @@
       "sha512": "sha512-8BdBYsfnntuICbFMHIZsd5morwURN8Ucsvq7wJeyLV1Z1ze6CAIxVKEirufgjGIiXfF0M0sCr9EVFloZSazWew==",
       "path": "guna.ui2.winforms/2.0.4.7",
       "hashPath": "guna.ui2.winforms.2.0.4.7.nupkg.sha512"
+    },
+    "InputSimulator/1.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-D0LvRCPQMX6/FJHBjng+RO+wRDuHTJrfo7IAc7rmkPvRqchdVGJWg3y70peOtDy3OLNK+HSOwVkH4GiuLnkKgA==",
+      "path": "inputsimulator/1.0.4",
+      "hashPath": "inputsimulator.1.0.4.nupkg.sha512"
     },
     "Magick.NET-Q8-AnyCPU/7.9.0": {
       "type": "package",
