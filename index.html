@@ -41,15 +41,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <nav class="navbar navbar-expand-lg sticky-top custom-navbar" id="mainNav">
         <div class="container px-4">
- <img src="images/transparent_logo.png" 
-         alt="MindQA Brain Logo"
-         style="width: 120px; height: 110px; margin-right: 8px;">
-    
-    <!-- <span class="text-white">Mind</span><span class="highlight">QA</span> -->
-</a>
+ <a class="navbar-brand" href="#">
+        <img src="images/transparent_logo.png"
+             alt="MindQA Logo"
+             class="logo logo-light">
 
-              
-
+        <img src="images/Logo.png"
+             alt="MindQA Logo"
+             class="logo logo-dark">
+    </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -554,6 +554,7 @@ document.querySelector(".mega-link").addEventListener("click", function (e) {
         submenu.classList.toggle("open");
     }
 });
+document.body.setAttribute("data-bs-theme", "dark");
 
 </script>
 

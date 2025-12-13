@@ -1,3 +1,22 @@
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+/* Default (light theme) */
+.logo-light { display: block; }
+.logo-dark  { display: none; }
+
+/* Bootstrap dark theme */
+[data-bs-theme="dark"] .logo-light {
+    display: none;
+}
+
+[data-bs-theme="dark"] .logo-dark {
+    display: block;
+}
+
+
 /* ------------------------------------------
    MOBILE SUBMENU
 ------------------------------------------- */
@@ -143,19 +162,23 @@ body[data-bs-theme="dark"] .mega-link.mega-link {
     cursor: pointer;
 }
 
-/* Mega menu panel */
+.nav-item {
+    position: relative;
+}
+
 .mega-menu {
     display: none;
     position: absolute;
+    top: 100%;       
     left: 0;
-    top: 120px;
     width: 100%;
-    background: #ffffff !important;  /* FIXED — pure white */
+    background: #ffffff;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     padding: 30px 0;
-    border-radius: 8px;               /* FIXED */
-    z-index: 999;
+    border-radius: 8px;
+    z-index: 9999;
 }
+
 
 .mega-dropdown:hover .mega-menu {
     display: block;
