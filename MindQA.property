@@ -1,0 +1,14 @@
+# Application Configuration
+# Sat Jul 19 10:09:37 2025
+Itration=	2
+ISInterctive=Y
+outputJsonFilePath=C:\\Auto\\log\\data{str}.js
+licenceKey=juzr9*%3tf@$q0zhgi!dExMo8uEFZT+Px60weIv/DuoGJIDLqRqy65IByHINmLY5JafI0XbGcOMrfElYY2Ap2UlUGtzIWuRUmyZTuNHgTNWFPqv5B8kP3PmE8N6vGPu7BT4=mindqa
+outputReplace={str}
+DataSheetName=GData
+WorkingExcelFilePath=C:\\Auto\\data\\TestData_omiga2.xls
+ImageFilePath=C:\\Auto\\Images
+ExcelFilePath=C:\\Auto\data\\TestData_omiga.xls
+hideKey=password
+nonIdLocatorType=True
+outputJsonListFilePath=C:\\Auto\\log\\dataList.js
