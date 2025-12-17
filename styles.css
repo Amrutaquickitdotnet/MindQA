@@ -1,0 +1,1665 @@
+<<<<<<< HEAD
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+/* Default (light theme) */
+.logo-light { display: block; }
+.logo-dark  { display: none; }
+
+/* Bootstrap dark theme */
+[data-bs-theme="dark"] .logo-light {
+    display: none;
+}
+
+[data-bs-theme="dark"] .logo-dark {
+    display: block;
+}
+
+
+/* ------------------------------------------
+   MOBILE SUBMENU
+------------------------------------------- */
+
+.mobile-submenu.open {
+    display: block;
+}
+@media (max-width: 992px) {
+    .mega-menu {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 10px 0;
+    }
+
+    .mega-inner {
+        flex-direction: column;
+    }
+
+    .mega-column {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .mega-menu h4 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+}
+
+.mega-menu {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Mobile submenu */
+.mobile-submenu {
+    display: none;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.mobile-submenu a {
+    display: block;
+    padding: 8px 0;
+    color: #555;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+@media (min-width: 992px) {
+    .mobile-submenu {
+        display: none !important;
+    }
+}
+
+/* ------------------------------------------
+   NAVBAR LINK FIX — Resources same color
+------------------------------------------- */
+
+.navbar-nav .mega-link {
+    color: #ffffff !important;     /* FIXED — now same white as all top links */
+    font-weight: 500;
+    text-decoration: none !important;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;         
+    height: 100%;
+}
+/* Hover color for Solutions */
+.mega-dropdown > a.mega-link:hover,
+.mega-dropdown:hover > a.mega-link {
+    color: #7cc000 !important;
+    transition: 0.2s ease-in-out;
+}
+.navbar .mega-dropdown > a.mega-link:hover,
+.navbar .mega-dropdown:hover > a.mega-link,
+.navbar .mega-link:hover {
+    color: #7cc000 !important;
+}
+
+/* Hover effect */
+.navbar-nav .mega-link:hover {
+    color: #7cc000 !important;   /* green hover */
+}
+
+/* Active (optional) */
+.navbar-nav .mega-link.active {
+    color: #7cc000 !important;
+}
+
+body[data-bs-theme="light"] nav .navbar-nav li .mega-link,
+body[data-bs-theme="light"] .mega-link.mega-link {
+    color: #64748B  !important;
+}
+
+body[data-bs-theme="dark"] nav .navbar-nav li .mega-link,
+body[data-bs-theme="dark"] .mega-link.mega-link {
+    color: #cbcdcf !important;
+}
+
+
+.dropdown-toggle {
+    opacity: .65;
+}
+/* ------------------------------------------
+   MEGA MENU DROPDOWN
+------------------------------------------- */
+
+.mega-link::after {
+    content: "";
+    border: solid currentColor;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-left: 6px;
+    transition: 0.2s ease;
+}
+
+/* Rotate arrow on hover */
+.mega-dropdown:hover .mega-link::after {
+    transform: rotate(-135deg);
+}
+
+/* Arrow alignment fix */
+.navbar-nav .mega-link::after {
+    margin-left: 4px;
+}
+
+/* Keep entire LI aligned */
+.navbar-nav .mega-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+/* Mega dropdown base */
+.mega-dropdown {
+    position: static;
+    color: grey;
+}
+
+.mega-link {
+    cursor: pointer;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;       
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    padding: 30px 0;
+    border-radius: 8px;
+    z-index: 9999;
+}
+
+
+.mega-dropdown:hover .mega-menu {
+    display: block;
+}
+
+/* Inner wrapper */
+.mega-inner {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1.2fr;
+    gap: 40px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+/* Headings inside mega menu */
+.mega-column h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #7cc000 !important;     /* FIXED — unified with green accent */
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+    line-height: 1.3 !important;
+    text-transform: uppercase;
+}
+
+/* Menu links */
+.mega-column a {
+    display: block;
+    text-decoration: none;
+    padding: 4px 0;
+    color: #222 !important;         /* FIXED — consistent darker text */
+    font-size: 14px;
+}
+
+.mega-column a:hover {
+    color: #7cc000 !important;
+}
+
+/* Responsive behavior */
+@media (max-width: 1200px) {
+    .mega-inner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .mega-right {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 992px) {
+    .mega-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    .mega-right {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .mega-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        padding: 15px;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+
+    .mega-menu.open {
+        display: block;
+    }
+
+    .mega-inner {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .mega-right {
+        grid-column: span 1;
+    }
+}
+
+/* Smooth fade */
+.mega-menu {
+    animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+.typing-container {
+  font-size: 48px;
+  font-weight: 800;
+  color: #4461F2;
+  margin-bottom: 20px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 4px;
+  height: 30px; /* same as your text */
+  background: #4461F2;
+  margin-left: 6px;
+  border-radius: 2px;
+  box-shadow: 0 0 12px #4461F2;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.hover-line span {
+  color: #4C4CDD; /* Opposite of #b2dd4c */
+}
+/* --- 1. THEME & COLORS (Custom Bootstrap Overrides) --- */
+
+:root {
+    /* Dark Theme Defaults */
+    --bs-primary: #3f6212; /* Deep Green (used for backgrounds/accents) */
+    --bs-success: #b2dd4b; /* Bright Lime Green for Highlight */
+    --bs-dark: #0b0f19; /* Main Body Background */
+    --bs-black: #05070f; /* Footer/Deepest Black */
+    --bs-secondary-bg-subtle: #161b2c; /* Card/Dashboard Background */
+    --bs-border-color-translucent: rgba(255, 255, 255, 0.1);
+    --bs-text-main: #ffffff;
+    --bs-text-muted: rgba(255, 255, 255, 0.75);
+}
+
+/* --- LIGHT THEME OVERRIDES (White Background and Bright Lime Green Accent) --- */
+[data-bs-theme="light"] {
+    /* Backgrounds set to White (#ffffff) */
+    --bs-dark: #ffffff; 
+    --bs-black: #ffffff;
+    --bs-secondary-bg-subtle: #ffffff;
+    
+    /* Accent Colors set to Bright Lime Green (#b2dd4b) */
+    --bs-primary: #b2dd4b; 
+    --bs-success: #b2dd4b; 
+    
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.15);
+    --bs-text-main: #0f172a; 
+    --bs-text-muted: #64748b; 
+
+    /* Override Bootstrap specific colors for body/text */
+    --bs-body-color: var(--bs-text-main);
+    --bs-body-bg: var(--bs-dark);
+}
+
+
+/* Override Bootstrap Utilities */
+.bg-dark, 
+.hero-section, 
+.features-section,
+.who-is-for-section {
+    background-color: var(--bs-dark) !important;
+}
+
+.text-white {
+    color: var(--bs-text-main) !important;
+}
+
+.text-secondary {
+    color: var(--bs-text-muted) !important;
+}
+
+/* Highlight Text (Now uses the Bright Lime Green in both themes) */
+.highlight-text,
+.highlight {
+    color: var(--bs-success) !important;
+}
+
+/* Custom Primary Button (Book Demo / Watch Demo) */
+.custom-btn-primary:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+.custom-btn-primary,
+.btn-success {
+    font-weight: 700 !important;
+}
+/* Dark theme button style (Dark text on bright lime) */
+[data-bs-theme="dark"] .custom-btn-primary,
+[data-bs-theme="dark"] .btn-success {
+    color: var(--bs-dark) !important; 
+    background-color: #b2dd4b;
+    border-color: #b2dd4b;
+}
+/* Light theme button style (Dark text on bright lime - low contrast) */
+[data-bs-theme="light"] .custom-btn-primary,
+[data-bs-theme="light"] .btn-success {
+    color: #0f172a !important; 
+    background-color: var(--bs-success); 
+    border-color: var(--bs-success);
+}
+
+/* Custom Outline Button (Learn More / Log in) */
+.custom-btn-outline {
+    border: 1px solid var(--bs-border-color-translucent) !important;
+    color: var(--bs-text-main) !important;
+    background-color: transparent !important;
+}
+.custom-btn-outline:hover {
+    background-color: var(--bs-secondary-bg-subtle) !important;
+}
+
+
+/* --- 2. LAYOUT & NAVIGATION --- */
+
+/* Retell AI Style Background Animation (Hero Section) */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50vh; left: -50vw;
+    width: 200vw; height: 200vh;
+    background: radial-gradient(circle at 15% 15%, rgba(178, 221, 75, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 85% 70%, rgba(178, 221, 75, 0.1) 0%, transparent 15%),
+                radial-gradient(circle at 30% 90%, rgba(178, 221, 75, 0.1) 0%, transparent 10%);
+    opacity: 0.1;
+    z-index: 1;
+    animation: flow 40s linear infinite;
+}
+
+@keyframes flow {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(100px, -50px) rotate(360deg); }
+}
+
+/* Custom Navbar Appearance */
+.custom-navbar {
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--bs-border-color-translucent);
+    z-index: 1020;
+    /* Use background with opacity for the blur effect to work */
+    background-color: var(--bs-dark); 
+}
+[data-bs-theme="dark"] .custom-navbar {
+     background-color: rgba(11, 15, 25, 0.95);
+}
+[data-bs-theme="light"] .custom-navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Ensure navbar links are dark in light mode */
+    --bs-body-color: var(--bs-text-main);
+}
+
+
+.custom-navbar .nav-link {
+    color: var(--bs-text-muted) !important;
+    font-weight: 500;
+}
+.custom-navbar .nav-link:hover {
+    color: var(--bs-success) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--bs-border-color-translucent) !important;
+}
+
+
+/* --- 3. HERO CONTENT & DASHBOARD CARD --- */
+
+.mindqa-logo-lg {
+    width: 100px; 
+    height: 100px;
+}
+
+/* Dashboard Card */
+.dashboard-card {
+    background-color: var(--bs-secondary-bg-subtle);
+    border: 1px solid var(--bs-border-color-translucent);
+    z-index: 5;
+    position: relative;
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+    transition: transform 0.5s ease;
+}
+
+.dashboard-card:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+/* Card Elements */
+.small-bar {
+    height: 6px;
+    /* Use the bright lime green for the light theme as well */
+    background: linear-gradient(to right, var(--bs-success) 30%, var(--bs-primary) 60%, var(--bs-secondary-bg-subtle));
+}
+
+.mini-card {
+    aspect-ratio: 16/9;
+    border: 1px solid var(--bs-border-color-translucent);
+    /* Use deep dark color for background of images/cards in both themes for contrast */
+    background-color: #0f172a; 
+}
+
+.chart-container {
+    position: relative;
+    height: 250px;
+    border: 1px solid var(--bs-border-color-translucent);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Animation Container for the Dashboard View */
+.chart-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    position: absolute; /* Added: Important for the scroll effect */
+    top: 0;
+    left: 0;
+    /* NEW: Data Scroll Animation */
+    animation: data-scroll 10s linear infinite; 
+}
+
+/* NEW: Keyframes for data scroll effect */
+@keyframes data-scroll {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10%); } /* Scroll slightly down */
+    100% { transform: translateY(0); }
+}
+
+
+/* Animated Bar inside the chart/screenshot */
+.chart-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dark theme scan line */
+    background: linear-gradient(90deg, transparent 0%, rgba(178, 221, 75, 0.2) 50%, transparent 100%);
+    opacity: 0.5;
+    animation: scan-line 3s linear infinite;
+}
+
+/* Light theme adjustment for scan line (Uses the same lime green with lower opacity) */
+[data-bs-theme="light"] .chart-bar {
+    background: linear-gradient(90deg, transparent 0%, rgba(178, 221, 75, 0.2) 50%, transparent 100%);
+    opacity: 0.7;
+}
+
+@keyframes scan-line {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Shine effect */
+.shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease-in-out;
+    opacity: 0.5;
+    pointer-events: none;
+    animation: card-shine 8s infinite ease-in-out;
+}
+
+@keyframes card-shine {
+    0% { left: -100%; }
+    50% { left: 150%; }
+    100% { left: -100%; }
+}
+
+/* NEW: Live Status Indicator */
+.dashboard-card h6 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.live-indicator {
+    padding: 0.1rem 0.4rem;
+    background-color: var(--bs-success);
+    color: var(--bs-dark);
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    /* Apply Status Pulse Animation */
+    animation: status-pulse 2s infinite ease-out;
+}
+/* NEW: Keyframes for status pulse */
+@keyframes status-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(178, 221, 75, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(178, 221, 75, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(178, 221, 75, 0); }
+}
+
+
+/* --- 4. FEATURES & WHO IS FOR SECTIONS (UPDATED) --- */
+
+.features-section,
+.who-is-for-section {
+    border-top: 1px solid var(--bs-border-color-translucent);
+}
+
+/* --- 4. FEATURES & WHO IS FOR SECTIONS (UPDATED) --- */
+
+.features-section,
+.who-is-for-section {
+    border-top: 1px solid var(--bs-border-color-translucent);
+}
+
+.feature-card,
+.role-card { /* Combined styling for consistency */
+    position: relative; /* Essential for the :before pseudo-element */
+    border: 1px solid var(--bs-border-color-translucent);
+    background-color: var(--bs-secondary-bg-subtle);
+    /* REMOVED: transition: all 0.3s ease; */
+    border-radius: 12px !important; /* Softened corners */
+    overflow: hidden; /* Important to contain the animated border */
+    z-index: 1;
+    /* ADDED: Explicit transition only for AOS properties */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* You can adjust the 0.5s if needed, but remove the 'all' */
+}
+
+.feature-card:hover,
+.role-card:hover { /* Combined hover effect */
+    /* ADDED: Ensure the hover effect remains smooth */
+    transition: all 0.3s ease; /* Transition for the HOVER properties (box-shadow, transform) */
+    border-color: transparent; /* Hide the static border */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(178, 221, 75, 0.15); 
+}
+[data-bs-theme="light"] .feature-card:hover,
+[data-bs-theme="light"] .role-card:hover {
+    box-shadow: 0 10px 20px rgba(178, 221, 75, 0.1);
+}
+
+/* ... rest of Section 4 CSS ... */
+/* ... rest of Section 4 CSS ... */
+
+/* Animated Gradient Border on Hover */
+.feature-card::before,
+.role-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--bs-success), transparent 30%, var(--bs-success));
+    background-size: 200% 200%;
+    border-radius: 12px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.feature-card:hover::before,
+.role-card:hover::before {
+    opacity: 1;
+    animation: feature-border-animate 2s linear infinite;
+}
+
+@keyframes feature-border-animate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Styling for image icons in the Role/Feature cards */
+.role-icon {
+    width: 80px; 
+    height: 80px; 
+    object-fit: contain;
+    margin-bottom: 1rem;
+    
+    /* Subtle glow/shadow for style and animation base */
+    /* REPLACED: Combine both floating and pulse into one animation */
+    animation: icon-float-and-pulse 3s infinite ease-in-out; 
+    
+    transform-origin: center;
+}
+
+/* NEW: Unified Keyframes for Floating and Pulse/Glow */
+@keyframes icon-float-and-pulse {
+    0% {
+        /* Combined starting transform and filter */
+        transform: scale(1) translateY(0); 
+        filter: drop-shadow(0 0 5px rgba(178, 221, 75, 0.5));
+    }
+    50% {
+        /* Combined mid-point transform: Float Upward AND Bigger Scale */
+        transform: scale(1.04) translateY(-8px); 
+        filter: drop-shadow(0 0 12px rgba(178, 221, 75, 0.9));
+    }
+    100% {
+        /* Combined end transform and filter */
+        transform: scale(1) translateY(0);
+        filter: drop-shadow(0 0 5px rgba(178, 221, 75, 0.5));
+    }
+}
+
+
+/* --- 5. FOOTER --- */
+footer {
+    background-color: var(--bs-black) !important;
+    border-top: 1px solid var(--bs-border-color-translucent);
+}
+
+/* Footer specific overrides for light theme */
+[data-bs-theme="light"] footer {
+    /* Set a distinct light grey for the footer in light mode */
+    background-color: #f1f5f9 !important; 
+    color: var(--bs-text-main) !important; 
+}
+[data-bs-theme="light"] footer .text-secondary {
+    /* Ensure muted text in the light mode footer is readable */
+    color: #334155 !important; 
+}
+
+
+/* --- 6. MEDIA QUERIES --- */
+
+/* Adjustments for smaller screens */
+@media (max-width: 992px) {
+    .hero-section {
+        min-height: auto;
+        padding-top: 6rem;
+    }
+
+    .mindqa-logo-lg {
+        display: none;
+    }
+    
+    .hero-section h1,
+    .hero-section p {
+        text-align: center;
+    }
+
+    .hero-section .d-flex.gap-3 {
+        justify-content: center;
+    }
+
+    .dashboard-card {
+        margin-top: 3rem;
+        transform: none;
+    }
+    
+}
+footer,
+footer * {
+    background-color: #000 !important;
+}
+
+footer {
+    color: #fff !important;
+}
+
+footer h6 {
+    color: #fff !important;
+}
+
+footer a {
+    color: #ccc !important;
+}
+
+footer a:hover {
+    color: #7cc000 !important;
+}
+
+.social-icon i {
+    color: #fff !important;
+}
+footer a {
+    text-decoration: none !important;
+}
+.full-black-footer {
+    background-color: #000 !important;
+    width: 100%;
+}
+
+body {
+    background-color: #000 !important;
+}
+.full-black-footer {
+    background:#000 !important;
+}
+
+footer {
+    background-color: var(--bs-black) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="light"] footer {
+    background-color: #000 !important; /* FIXED */
+    color: #fff !important;
+}
+.social-icon {
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: rotate(360deg) scale(1.2);
+  filter: drop-shadow(0 0 10px #00ff6a);
+}
+/* <!-- CSS for About Us --> */
+
+  :root {
+    --about-bg: #e6f7f1; /* Light theme background */
+    --about-text-color: #000;
+    --about-heading-color: #0b3d91;
+  }
+
+  /* Dark Theme Variables */
+  [data-theme="dark"] {
+    --about-bg: #000; /* Black for dark theme */
+    --about-text-color: #e6f7f1;
+    --about-heading-color: #7ec8ff;
+  }
+
+  .about-section {
+    background: var(--about-bg);
+    font-family: Calibri, sans-serif;
+  }
+
+  .about-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--about-heading-color);
+  }
+
+  .about-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #64748b;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+=======
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+/* Default (light theme) */
+.logo-light { display: block; }
+.logo-dark  { display: none; }
+
+/* Bootstrap dark theme */
+[data-bs-theme="dark"] .logo-light {
+    display: none;
+}
+
+[data-bs-theme="dark"] .logo-dark {
+    display: block;
+}
+
+
+/* ------------------------------------------
+   MOBILE SUBMENU
+------------------------------------------- */
+
+.mobile-submenu.open {
+    display: block;
+}
+@media (max-width: 992px) {
+    .mega-menu {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 10px 0;
+    }
+
+    .mega-inner {
+        flex-direction: column;
+    }
+
+    .mega-column {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .mega-menu h4 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+}
+
+.mega-menu {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Mobile submenu */
+.mobile-submenu {
+    display: none;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.mobile-submenu a {
+    display: block;
+    padding: 8px 0;
+    color: #555;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+@media (min-width: 992px) {
+    .mobile-submenu {
+        display: none !important;
+    }
+}
+
+/* ------------------------------------------
+   NAVBAR LINK FIX — Resources same color
+------------------------------------------- */
+
+.navbar-nav .mega-link {
+    color: #ffffff !important;     /* FIXED — now same white as all top links */
+    font-weight: 500;
+    text-decoration: none !important;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;         
+    height: 100%;
+}
+/* Hover color for Solutions */
+.mega-dropdown > a.mega-link:hover,
+.mega-dropdown:hover > a.mega-link {
+    color: #7cc000 !important;
+    transition: 0.2s ease-in-out;
+}
+.navbar .mega-dropdown > a.mega-link:hover,
+.navbar .mega-dropdown:hover > a.mega-link,
+.navbar .mega-link:hover {
+    color: #7cc000 !important;
+}
+
+/* Hover effect */
+.navbar-nav .mega-link:hover {
+    color: #7cc000 !important;   /* green hover */
+}
+
+/* Active (optional) */
+.navbar-nav .mega-link.active {
+    color: #7cc000 !important;
+}
+
+body[data-bs-theme="light"] nav .navbar-nav li .mega-link,
+body[data-bs-theme="light"] .mega-link.mega-link {
+    color: #64748B  !important;
+}
+
+body[data-bs-theme="dark"] nav .navbar-nav li .mega-link,
+body[data-bs-theme="dark"] .mega-link.mega-link {
+    color: #cbcdcf !important;
+}
+
+
+.dropdown-toggle {
+    opacity: .65;
+}
+/* ------------------------------------------
+   MEGA MENU DROPDOWN
+------------------------------------------- */
+
+.mega-link::after {
+    content: "";
+    border: solid currentColor;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-left: 6px;
+    transition: 0.2s ease;
+}
+
+/* Rotate arrow on hover */
+.mega-dropdown:hover .mega-link::after {
+    transform: rotate(-135deg);
+}
+
+/* Arrow alignment fix */
+.navbar-nav .mega-link::after {
+    margin-left: 4px;
+}
+
+/* Keep entire LI aligned */
+.navbar-nav .mega-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+/* Mega dropdown base */
+.mega-dropdown {
+    position: static;
+    color: grey;
+}
+
+.mega-link {
+    cursor: pointer;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;       
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    padding: 30px 0;
+    border-radius: 8px;
+    z-index: 9999;
+}
+
+
+.mega-dropdown:hover .mega-menu {
+    display: block;
+}
+
+/* Inner wrapper */
+.mega-inner {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1.2fr;
+    gap: 40px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+/* Headings inside mega menu */
+.mega-column h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #7cc000 !important;     /* FIXED — unified with green accent */
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+    line-height: 1.3 !important;
+    text-transform: uppercase;
+}
+
+/* Menu links */
+.mega-column a {
+    display: block;
+    text-decoration: none;
+    padding: 4px 0;
+    color: #222 !important;         /* FIXED — consistent darker text */
+    font-size: 14px;
+}
+
+.mega-column a:hover {
+    color: #7cc000 !important;
+}
+
+/* Responsive behavior */
+@media (max-width: 1200px) {
+    .mega-inner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .mega-right {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 992px) {
+    .mega-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    .mega-right {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .mega-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        padding: 15px;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+
+    .mega-menu.open {
+        display: block;
+    }
+
+    .mega-inner {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .mega-right {
+        grid-column: span 1;
+    }
+}
+
+/* Smooth fade */
+.mega-menu {
+    animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+.typing-container {
+  font-size: 48px;
+  font-weight: 800;
+  color: #4461F2;
+  margin-bottom: 20px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 4px;
+  height: 30px; /* same as your text */
+  background: #4461F2;
+  margin-left: 6px;
+  border-radius: 2px;
+  box-shadow: 0 0 12px #4461F2;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.hover-line span {
+  color: #4C4CDD; /* Opposite of #b2dd4c */
+}
+/* --- 1. THEME & COLORS (Custom Bootstrap Overrides) --- */
+
+:root {
+    /* Dark Theme Defaults */
+    --bs-primary: #3f6212; /* Deep Green (used for backgrounds/accents) */
+    --bs-success: #b2dd4b; /* Bright Lime Green for Highlight */
+    --bs-dark: #0b0f19; /* Main Body Background */
+    --bs-black: #05070f; /* Footer/Deepest Black */
+    --bs-secondary-bg-subtle: #161b2c; /* Card/Dashboard Background */
+    --bs-border-color-translucent: rgba(255, 255, 255, 0.1);
+    --bs-text-main: #ffffff;
+    --bs-text-muted: rgba(255, 255, 255, 0.75);
+}
+
+/* --- LIGHT THEME OVERRIDES (White Background and Bright Lime Green Accent) --- */
+[data-bs-theme="light"] {
+    /* Backgrounds set to White (#ffffff) */
+    --bs-dark: #ffffff; 
+    --bs-black: #ffffff;
+    --bs-secondary-bg-subtle: #ffffff;
+    
+    /* Accent Colors set to Bright Lime Green (#b2dd4b) */
+    --bs-primary: #b2dd4b; 
+    --bs-success: #b2dd4b; 
+    
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.15);
+    --bs-text-main: #0f172a; 
+    --bs-text-muted: #64748b; 
+
+    /* Override Bootstrap specific colors for body/text */
+    --bs-body-color: var(--bs-text-main);
+    --bs-body-bg: var(--bs-dark);
+}
+
+
+/* Override Bootstrap Utilities */
+.bg-dark, 
+.hero-section, 
+.features-section,
+.who-is-for-section {
+    background-color: var(--bs-dark) !important;
+}
+
+.text-white {
+    color: var(--bs-text-main) !important;
+}
+
+.text-secondary {
+    color: var(--bs-text-muted) !important;
+}
+
+/* Highlight Text (Now uses the Bright Lime Green in both themes) */
+.highlight-text,
+.highlight {
+    color: var(--bs-success) !important;
+}
+
+/* Custom Primary Button (Book Demo / Watch Demo) */
+.custom-btn-primary:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+.custom-btn-primary,
+.btn-success {
+    font-weight: 700 !important;
+}
+/* Dark theme button style (Dark text on bright lime) */
+[data-bs-theme="dark"] .custom-btn-primary,
+[data-bs-theme="dark"] .btn-success {
+    color: var(--bs-dark) !important; 
+    background-color: #b2dd4b;
+    border-color: #b2dd4b;
+}
+/* Light theme button style (Dark text on bright lime - low contrast) */
+[data-bs-theme="light"] .custom-btn-primary,
+[data-bs-theme="light"] .btn-success {
+    color: #0f172a !important; 
+    background-color: var(--bs-success); 
+    border-color: var(--bs-success);
+}
+
+/* Custom Outline Button (Learn More / Log in) */
+.custom-btn-outline {
+    border: 1px solid var(--bs-border-color-translucent) !important;
+    color: var(--bs-text-main) !important;
+    background-color: transparent !important;
+}
+.custom-btn-outline:hover {
+    background-color: var(--bs-secondary-bg-subtle) !important;
+}
+
+
+/* --- 2. LAYOUT & NAVIGATION --- */
+
+/* Retell AI Style Background Animation (Hero Section) */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50vh; left: -50vw;
+    width: 200vw; height: 200vh;
+    background: radial-gradient(circle at 15% 15%, rgba(178, 221, 75, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 85% 70%, rgba(178, 221, 75, 0.1) 0%, transparent 15%),
+                radial-gradient(circle at 30% 90%, rgba(178, 221, 75, 0.1) 0%, transparent 10%);
+    opacity: 0.1;
+    z-index: 1;
+    animation: flow 40s linear infinite;
+}
+
+@keyframes flow {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(100px, -50px) rotate(360deg); }
+}
+
+/* Custom Navbar Appearance */
+.custom-navbar {
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--bs-border-color-translucent);
+    z-index: 1020;
+    /* Use background with opacity for the blur effect to work */
+    background-color: var(--bs-dark); 
+}
+[data-bs-theme="dark"] .custom-navbar {
+     background-color: rgba(11, 15, 25, 0.95);
+}
+[data-bs-theme="light"] .custom-navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Ensure navbar links are dark in light mode */
+    --bs-body-color: var(--bs-text-main);
+}
+
+
+.custom-navbar .nav-link {
+    color: var(--bs-text-muted) !important;
+    font-weight: 500;
+}
+.custom-navbar .nav-link:hover {
+    color: var(--bs-success) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--bs-border-color-translucent) !important;
+}
+
+
+/* --- 3. HERO CONTENT & DASHBOARD CARD --- */
+
+.mindqa-logo-lg {
+    width: 100px; 
+    height: 100px;
+}
+
+/* Dashboard Card */
+.dashboard-card {
+    background-color: var(--bs-secondary-bg-subtle);
+    border: 1px solid var(--bs-border-color-translucent);
+    z-index: 5;
+    position: relative;
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+    transition: transform 0.5s ease;
+}
+
+.dashboard-card:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+/* Card Elements */
+.small-bar {
+    height: 6px;
+    /* Use the bright lime green for the light theme as well */
+    background: linear-gradient(to right, var(--bs-success) 30%, var(--bs-primary) 60%, var(--bs-secondary-bg-subtle));
+}
+
+.mini-card {
+    aspect-ratio: 16/9;
+    border: 1px solid var(--bs-border-color-translucent);
+    /* Use deep dark color for background of images/cards in both themes for contrast */
+    background-color: #0f172a; 
+}
+
+.chart-container {
+    position: relative;
+    height: 250px;
+    border: 1px solid var(--bs-border-color-translucent);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Animation Container for the Dashboard View */
+.chart-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    position: absolute; /* Added: Important for the scroll effect */
+    top: 0;
+    left: 0;
+    /* NEW: Data Scroll Animation */
+    animation: data-scroll 10s linear infinite; 
+}
+
+/* NEW: Keyframes for data scroll effect */
+@keyframes data-scroll {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10%); } /* Scroll slightly down */
+    100% { transform: translateY(0); }
+}
+
+
+/* Animated Bar inside the chart/screenshot */
+.chart-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dark theme scan line */
+    background: linear-gradient(90deg, transparent 0%, rgba(178, 221, 75, 0.2) 50%, transparent 100%);
+    opacity: 0.5;
+    animation: scan-line 3s linear infinite;
+}
+
+/* Light theme adjustment for scan line (Uses the same lime green with lower opacity) */
+[data-bs-theme="light"] .chart-bar {
+    background: linear-gradient(90deg, transparent 0%, rgba(178, 221, 75, 0.2) 50%, transparent 100%);
+    opacity: 0.7;
+}
+
+@keyframes scan-line {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Shine effect */
+.shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease-in-out;
+    opacity: 0.5;
+    pointer-events: none;
+    animation: card-shine 8s infinite ease-in-out;
+}
+
+@keyframes card-shine {
+    0% { left: -100%; }
+    50% { left: 150%; }
+    100% { left: -100%; }
+}
+
+/* NEW: Live Status Indicator */
+.dashboard-card h6 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.live-indicator {
+    padding: 0.1rem 0.4rem;
+    background-color: var(--bs-success);
+    color: var(--bs-dark);
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    /* Apply Status Pulse Animation */
+    animation: status-pulse 2s infinite ease-out;
+}
+/* NEW: Keyframes for status pulse */
+@keyframes status-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(178, 221, 75, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(178, 221, 75, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(178, 221, 75, 0); }
+}
+
+
+/* --- 4. FEATURES & WHO IS FOR SECTIONS (UPDATED) --- */
+
+.features-section,
+.who-is-for-section {
+    border-top: 1px solid var(--bs-border-color-translucent);
+}
+
+/* --- 4. FEATURES & WHO IS FOR SECTIONS (UPDATED) --- */
+
+.features-section,
+.who-is-for-section {
+    border-top: 1px solid var(--bs-border-color-translucent);
+}
+
+.feature-card,
+.role-card { /* Combined styling for consistency */
+    position: relative; /* Essential for the :before pseudo-element */
+    border: 1px solid var(--bs-border-color-translucent);
+    background-color: var(--bs-secondary-bg-subtle);
+    /* REMOVED: transition: all 0.3s ease; */
+    border-radius: 12px !important; /* Softened corners */
+    overflow: hidden; /* Important to contain the animated border */
+    z-index: 1;
+    /* ADDED: Explicit transition only for AOS properties */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* You can adjust the 0.5s if needed, but remove the 'all' */
+}
+
+.feature-card:hover,
+.role-card:hover { /* Combined hover effect */
+    /* ADDED: Ensure the hover effect remains smooth */
+    transition: all 0.3s ease; /* Transition for the HOVER properties (box-shadow, transform) */
+    border-color: transparent; /* Hide the static border */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(178, 221, 75, 0.15); 
+}
+[data-bs-theme="light"] .feature-card:hover,
+[data-bs-theme="light"] .role-card:hover {
+    box-shadow: 0 10px 20px rgba(178, 221, 75, 0.1);
+}
+
+/* ... rest of Section 4 CSS ... */
+/* ... rest of Section 4 CSS ... */
+
+/* Animated Gradient Border on Hover */
+.feature-card::before,
+.role-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--bs-success), transparent 30%, var(--bs-success));
+    background-size: 200% 200%;
+    border-radius: 12px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.feature-card:hover::before,
+.role-card:hover::before {
+    opacity: 1;
+    animation: feature-border-animate 2s linear infinite;
+}
+
+@keyframes feature-border-animate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Styling for image icons in the Role/Feature cards */
+.role-icon {
+    width: 80px; 
+    height: 80px; 
+    object-fit: contain;
+    margin-bottom: 1rem;
+    
+    /* Subtle glow/shadow for style and animation base */
+    /* REPLACED: Combine both floating and pulse into one animation */
+    animation: icon-float-and-pulse 3s infinite ease-in-out; 
+    
+    transform-origin: center;
+}
+
+/* NEW: Unified Keyframes for Floating and Pulse/Glow */
+@keyframes icon-float-and-pulse {
+    0% {
+        /* Combined starting transform and filter */
+        transform: scale(1) translateY(0); 
+        filter: drop-shadow(0 0 5px rgba(178, 221, 75, 0.5));
+    }
+    50% {
+        /* Combined mid-point transform: Float Upward AND Bigger Scale */
+        transform: scale(1.04) translateY(-8px); 
+        filter: drop-shadow(0 0 12px rgba(178, 221, 75, 0.9));
+    }
+    100% {
+        /* Combined end transform and filter */
+        transform: scale(1) translateY(0);
+        filter: drop-shadow(0 0 5px rgba(178, 221, 75, 0.5));
+    }
+}
+
+
+/* --- 5. FOOTER --- */
+footer {
+    background-color: var(--bs-black) !important;
+    border-top: 1px solid var(--bs-border-color-translucent);
+}
+
+/* Footer specific overrides for light theme */
+[data-bs-theme="light"] footer {
+    /* Set a distinct light grey for the footer in light mode */
+    background-color: #f1f5f9 !important; 
+    color: var(--bs-text-main) !important; 
+}
+[data-bs-theme="light"] footer .text-secondary {
+    /* Ensure muted text in the light mode footer is readable */
+    color: #334155 !important; 
+}
+
+
+/* --- 6. MEDIA QUERIES --- */
+
+/* Adjustments for smaller screens */
+@media (max-width: 992px) {
+    .hero-section {
+        min-height: auto;
+        padding-top: 6rem;
+    }
+
+    .mindqa-logo-lg {
+        display: none;
+    }
+    
+    .hero-section h1,
+    .hero-section p {
+        text-align: center;
+    }
+
+    .hero-section .d-flex.gap-3 {
+        justify-content: center;
+    }
+
+    .dashboard-card {
+        margin-top: 3rem;
+        transform: none;
+    }
+    
+}
+footer,
+footer * {
+    background-color: #000 !important;
+}
+
+footer {
+    color: #fff !important;
+}
+
+footer h6 {
+    color: #fff !important;
+}
+
+footer a {
+    color: #ccc !important;
+}
+
+footer a:hover {
+    color: #7cc000 !important;
+}
+
+.social-icon i {
+    color: #fff !important;
+}
+footer a {
+    text-decoration: none !important;
+}
+.full-black-footer {
+    background-color: #000 !important;
+    width: 100%;
+}
+
+body {
+    background-color: #000 !important;
+}
+.full-black-footer {
+    background:#000 !important;
+}
+
+footer {
+    background-color: var(--bs-black) !important;
+    color: #fff !important;
+}
+
+[data-bs-theme="light"] footer {
+    background-color: #000 !important; /* FIXED */
+    color: #fff !important;
+}
+.social-icon {
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: rotate(360deg) scale(1.2);
+  filter: drop-shadow(0 0 10px #00ff6a);
+}
+/* <!-- CSS for About Us --> */
+
+  :root {
+    --about-bg: #e6f7f1; /* Light theme background */
+    --about-text-color: #000;
+    --about-heading-color: #0b3d91;
+  }
+
+  /* Dark Theme Variables */
+  [data-theme="dark"] {
+    --about-bg: #000; /* Black for dark theme */
+    --about-text-color: #e6f7f1;
+    --about-heading-color: #7ec8ff;
+  }
+
+  .about-section {
+    background: var(--about-bg);
+    font-family: Calibri, sans-serif;
+  }
+
+  .about-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--about-heading-color);
+  }
+
+  .about-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #64748b;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+>>>>>>> e445ac170fa9ac3dd2ff8c125340b45bd243d4fd

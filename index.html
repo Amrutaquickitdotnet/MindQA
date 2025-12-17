@@ -1,0 +1,1126 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindQA Animated Landing Page</title>
+     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const player = document.querySelector('lottie-player');
+    
+    player.addEventListener('load', function() {
+        console.log('Lottie animation loaded successfully!');
+    });
+    
+    player.addEventListener('error', function(e) {
+        console.error('Lottie loading error:', e);
+    });
+    
+    player.addEventListener('ready', function() {
+        console.log('Lottie player ready');
+    });
+});
+</script>
+
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body data-bs-theme="light">
+
+
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar" id="mainNav">
+        <div class="container px-4">
+ <a class="navbar-brand" href="#">
+        <img src="images/transparent_logo.png"
+             alt="MindQA Logo"
+             class="logo logo-light">
+
+        <img src="images/Logo.png"
+             alt="MindQA Logo"
+             class="logo logo-dark">
+    </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
+                  
+  <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#who-is-for">For Whom</a></li>
+
+    <li class="mega-dropdown">
+    <a href="#" class="mega-link">Solutions</a>
+    <div class="mega-menu">
+        <div class="mega-inner">
+            <div class="mega-column">
+                <h4>SOLUTIONS</h4>
+                <a href="#">QA Engineers</a>
+                <a href="#">Developers</a>
+                <a href="#">Product Managers</a>
+                <a href="#">Business Analyst</a>
+            </div>
+            </li>
+ 
+ <li class="mega-dropdown">
+    <a href="#" class="mega-link">Resources</a>
+    <div class="mega-menu">
+        <div class="mega-inner">
+
+            <div class="mega-column">
+                <h4>RESOURCES</h4>
+                <a href="#">Case Studies</a>
+                <a href="#">eBooks & Guides</a>
+                <a href="#">Reports & White Papers</a>
+                <a href="#">Webinars & Videos</a>
+                <a href="#">Learn</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>PRODUCT INSIGHTS</h4>
+                <a href="#">Product Tours</a>
+                <a href="#">Trials</a>
+                <a href="#">Product Updates</a>
+                <a href="#">AI-powered Quality</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>EVENTS</h4>
+                <a href="#">MindQA Summit 2025</a>
+                <a href="#">Upcoming Webinars</a>
+                <a href="#">Past Event Highlights</a>
+                <a href="#" class="view-all">View all events →</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>Blog</h4>
+                <a href="#">MindQA Blog</a>
+                <a href="#">White paper</a>
+                <a href="#">Case Study</a>
+                <a href="#" class="view-all">View all →</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Submenu (must stay inside same LI) -->
+    <ul class="mobile-submenu">
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">eBooks & Guides</a></li>
+        <li><a href="#">Reports & White Papers</a></li>
+        <li><a href="#">Webinars & Videos</a></li>
+        <li><a href="#">Learn</a></li>
+
+        <!-- Add other 3 sections too -->
+        <li><strong>PRODUCT INSIGHTS</strong></li>
+        <li><a href="#">Product Tours</a></li>
+        <li><a href="#">Trials</a></li>
+        <li><a href="#">Product Updates</a></li>
+        <li><a href="#">AI-powered Quality</a></li>
+
+        <li><strong>EVENTS</strong></li>
+        <li><a href="#">MindQA Summit 2025</a></li>
+        <li><a href="#">Upcoming Webinars</a></li>
+        <li><a href="#">Past Event Highlights</a></li>
+        <li><a href="#">View all events →</a></li>
+    </ul>
+
+</li>
+
+
+  <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+  <li class="nav-item"><a class="nav-link" href="#docs">Documentation</a></li>
+  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+  
+                   <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
+</ul>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-link text-white theme-toggle me-3" id="themeToggle" title="Toggle Theme">
+                        <i class="bi bi-moon-fill fs-5"></i>
+                    </button>
+                    
+                    <button class="btn btn-outline-light me-2 fw-semibold d-none d-lg-block custom-btn-outline">Log in</button>
+                    <button class="btn btn-success px-3 fw-bold custom-btn-primary">Book Demo</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="hero-section d-flex align-items-center">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                
+                <div class="col-lg-6" data-aos="fade-right">
+                    
+                    <h2 class="typing-container">
+  <span id="typingText"></span><span class="cursor"></span>
+</h2>
+
+                    <h1 class="fw-bold display-5">
+                        Reimagine testing with
+                        <span class="highlight-text  hover-target">Scriptless automation & visual validation</span>
+                    </h1>
+
+                    <p class="text-secondary mt-3 fs-5">
+                        Record real user flows, set visual validations, reuse building blocks
+                        and run scheduled test suites — everything without writing code.
+                    </p>
+
+                    <div class="mt-5 d-flex gap-3">
+                        <button class="btn btn-success btn-lg px-5 py-3 fw-bold custom-btn-primary">
+                            <i class="bi bi-play-circle-fill me-2"></i> Watch Demo
+                        </button>
+                        <button class="btn btn-outline-secondary btn-lg px-4 py-3 fw-bold custom-btn-outline">Learn more</button>
+                    </div>
+                </div>
+
+               <div class="col-lg-6" data-aos="fade">
+    <div class="dashboard-card shadow-lg p-4 position-relative overflow-hidden rounded-4">
+
+        <div class="shine"></div>
+
+        <h6 class="fw-bold mb-3">
+            Test Automation Dashboard
+            <span class="live-indicator">LIVE</span>
+        </h6>
+        <div class="small-bar rounded mb-3"></div>
+
+                        <div class="row g-3">
+                            <div class="col-4">
+                                <div class="mini-card rounded overflow-hidden p-0">
+                                    <img src="images/1.jpg" class="w-100 h-100 object-fit-cover" alt="Visual Test Card" />
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mini-card rounded overflow-hidden p-0">
+                                    <img src="images/2.jpg" class="w-100 h-100 object-fit-cover" alt="Code Metrics Card" />
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mini-card rounded overflow-hidden p-0">
+                                    <img src="images/2.jpg" class="w-100 h-100 object-fit-cover" alt="Report Card" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart-container mt-4">
+                            <img src="images/2.jpg" class="chart-bg" alt="Main Dashboard View" />
+                            <div class="chart-bar"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+<!-- About Us HTML -->
+<section id="about" class="about-section py-5">
+  <div class="container">
+    <h2 class="about-heading text-center mb-4">About Us</h2>
+
+    <p class="about-text">
+      MindQA is a powerful scriptless test automation platform designed to make software testing faster, easier, and more reliable. Our platform enables testers to create and execute automated test cases without writing a single line of code.
+    </p>
+
+    <p class="about-text">
+      We focus on simplifying the automation journey for QA teams by offering intelligent test creation, reusable components, robust execution, and detailed reporting. With MindQA, teams can improve test efficiency, reduce manual efforts, and accelerate product releases.
+    </p>
+
+    <p class="about-text">
+      Whether you're testing web, mobile, or API applications, MindQA provides a seamless experience that adapts to both light and dark themes.
+    </p>
+  </div>
+</section>
+
+
+    <section class="features-section py-5 bg-dark" id="features">
+        <div class="container my-5">
+            <h2 class="text-center fw-bold display-6 mb-3 text-white">
+                Core Features that Propel Your QA
+            </h2>
+            <p class="text-center text-secondary mb-5 fs-5">
+                From self-healing elements to AI-driven reporting, we cover every angle of testing.
+            </p>
+
+            <div class="row g-4 text-center">
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="feature-card p-4 h-100">
+                        <i class="bi bi-cursor-fill display-5 mb-3 highlight"></i>
+                        <h3 class="h4 fw-bold text-white">Scriptless Recording</h3>
+                        <p class="text-secondary">
+                            Capture user interactions directly in the browser. No coding required to build complex test cases.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card p-4 h-100">
+                        <i class="bi bi-robot display-5 mb-3 highlight"></i>
+                        <h3 class="h4 fw-bold text-white">AI Self-Healing</h3>
+                        <p class="text-secondary">
+                           
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card p-4 h-100">
+                        <i class="bi bi-palette-fill display-5 mb-3 highlight"></i>
+                        <h3 class="h4 fw-bold text-white">Smart Validation</h3>
+                        <p class="text-secondary">
+                            MindQA's approach to Smart Test Case Validation extends far beyond simple pass/fail checks. It leverages AI and visual technologies to validate not just the functionality but also the correct appearance and performance of your application.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card p-4 h-100">
+                        <i class="bi bi-browser-safari display-5 mb-3 highlight"></i>
+                        <h3 class="h4 fw-bold text-white">Auto Xpath Identification</h3>
+                        <p class="text-secondary">
+                            When a QA Engineer uses MindQA's scriptless recorder to interact with an element (like clicking a button or filling a field), the platform doesn't just record a single XPath. It simultaneously captures and weights a variety of attributes for that element.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card p-4 h-100">
+                        <img src="images/7.jpg" class="role-icon mb-3" alt="Nightly Test Runs"/>
+                        <h3 class="h4 fw-bold text-white">Record and Playback</h3>
+                        <p class="text-secondary">
+                            Integrate performance checks directly into your functional tests to catch bottlenecks early.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card p-4 h-100">
+                         <img src="images/6.jpg" class="role-icon mb-3" alt="Nightly Test Runs"/>
+                        <h3 class="h4 fw-bold text-white">Nightly Test Runs</h3>
+                        <p class="text-secondary">
+                            Trigger tests automatically with every commit using native integration for tools like Jenkins, GitHub Actions, and GitLab.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="who-is-for-section py-5 bg-dark" id="who-is-for">
+        <div class="container my-5">
+            <h2 class="text-center fw-bold display-6 mb-3 text-white">
+                Who is MindQA For?
+            </h2>
+            <p class="text-center text-secondary mb-5 fs-5">
+                MindQA empowers everyone in the product development lifecycle to deliver quality faster.
+            </p>
+
+            <div class="row g-4 text-center justify-content-center">
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="role-card p-4 h-100">
+                        <img src="images/3.png" class="role-icon mb-3" alt="QA Engineer Icon" />
+                        
+                        <h3 class="h4 fw-bold text-white">QA Engineers</h3>
+                        <p class="text-secondary">
+                            Focus on complex scenarios, not brittle code. Leverage AI for maintenance and scale your test coverage instantly.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="role-card p-4 h-100">
+                        <img src="images/5.jpg" class="role-icon mb-3" alt="Developer Icon" />
+                        
+                        <h3 class="h4 fw-bold text-white">Developers</h3>
+                        <p class="text-secondary">
+                            Shift testing left with seamless integration into your CI/CD pipeline and eliminate end-to-end testing bottlenecks.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="role-card p-4 h-100">
+                        <img src="images/4.jpg" class="role-icon mb-3" alt="Product Manager Icon" />
+                        
+                        <h3 class="h4 fw-bold text-white">Product Managers</h3>
+                        <p class="text-secondary">
+                            Reduce release anxiety. Visualize testing progress and ensure features look and behave exactly as designed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer class="mt-5 pt-5 full-black-footer">
+  <div class="container pb-5">
+    <div class="row">
+
+      <!-- COMPANY -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="fw-bold text-uppercase mb-3">Company</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="about">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Leadership</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Security & Compliance</a></li>
+        </ul>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="fw-bold text-uppercase mb-3">Services</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">QA Consulting</a></li>
+          <li><a href="#">Automation Services</a></li>
+          <li><a href="#">Performance Testing</a></li>
+          <li><a href="#">API Testing</a></li>
+          <li><a href="#">Test Strategy & Planning</a></li>
+        </ul>
+      </div>
+
+      <!-- RESOURCES -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="fw-bold text-uppercase mb-3">Resources</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">eBooks & Guides</a></li>
+          <li><a href="#">Webinars</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Whitepapers</a></li>
+        </ul>
+      </div>
+
+      <!-- PRODUCTS -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="fw-bold text-uppercase mb-3">Offerings</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">MindQA Platform</a></li>
+          <li><a href="#">AI Test Generation</a></li>
+          <li><a href="#">Automation Dashboard</a></li>
+          <li><a href="#">Quality Analytics</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="col-12 col-md-4 mb-4">
+        <h6 class="fw-bold text-uppercase mb-3">Contact Us</h6>
+        <ul class="list-unstyled footer-links">
+          <li>Email: <a href="#">support@mindqa.com</a></li>
+          <li>Sales: <a href="#">sales@mindqa.com</a></li>
+          <li><br></li>
+          <li>Meet Us @</li>
+        </ul>
+        <div class="dsocial-icon d-flex gap-3">
+          <a class="social-icon" href="#"><i class="bi bi-linkedin"></i></a>
+          <a class="social-icon" href="#"><i class="bi bi-facebook"></i></a>
+          <a class="social-icon" href="#"><i class="bi bi-twitter-x"></i></a>
+          <a class="social-icon" href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div style="background:#0d2a4d; color:#fff;" class="py-3">
+    <div class="container d-flex flex-column flex-md-row justify-content-between text-center">
+      <div>©2025 MindQA. All Rights Reserved</div>
+      <div class="d-flex gap-4 justify-content-center">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms & Conditions</a>
+        <a href="#" class="footer-bottom-link">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+AOS.init({
+    duration: 10,  // Extremely fast animation time
+    easing: 'linear', // Constant speed, no slow-down at the end
+    once: true,
+    offset: 20,    // Trigger animation almost immediately upon scroll
+});
+    
+    // Theme Switching Script
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Function to set the theme based on the attribute
+        function setTheme(theme) {
+            body.setAttribute('data-bs-theme', theme);
+
+            if (themeToggle) {
+                const iconElement = themeToggle.querySelector('i');
+                if (iconElement) {
+                    // If theme is dark, show sun (option to switch to light).
+                    // If theme is light, show moon (option to switch to dark).
+                    iconElement.classList.toggle('bi-moon-fill', theme === 'light');
+                    iconElement.classList.toggle('bi-sun-fill', theme === 'dark');
+
+                    // Update text color for toggle button based on theme
+                    themeToggle.classList.toggle('text-white', theme === 'dark');
+                    themeToggle.classList.toggle('text-dark', theme === 'light');
+                }
+            }
+        }
+
+        // Initialize theme based on body attribute (will be 'light' on load)
+        const initialTheme = body.getAttribute('data-bs-theme') || 'light';
+        setTheme(initialTheme); 
+
+        // Toggle logic
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = body.getAttribute('data-bs-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                setTheme(newTheme);
+            });
+        }
+    });
+</script>
+<script>
+const texts = [
+  "Automate Complex Tests. Write Zero Code.",
+  "Test Smarter. Ship Faster.",
+  "Automate Tests In Minutes — Not Days.",
+  "Intelligent Automation. Faster Report Generation.",
+  "Game Changing Validation Engine.",
+  "End-to-End Coverage: API + Functional testing under one umbrella."
+
+];
+
+let index = 0;
+let charIndex = 0;
+let deleting = false;
+const typingText = document.getElementById("typingText");
+
+function typeEffect() {
+  const currentText = texts[index];
+
+  if (!deleting) {
+    typingText.textContent = currentText.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === currentText.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1200); // Pause before deleting
+      return;
+    }
+  } else {
+    typingText.textContent = currentText.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      deleting = false;
+      index = (index + 1) % texts.length;
+    }
+  }
+
+  setTimeout(typeEffect, deleting ? 60 : 90);
+}
+
+typeEffect();
+</script>
+<script>
+document.querySelector(".mega-link").addEventListener("click", function (e) {
+    if (window.innerWidth < 992) {
+        e.preventDefault();
+
+        const submenu = document.querySelector(".mobile-submenu");
+        submenu.classList.toggle("open");
+    }
+});
+document.body.setAttribute("data-bs-theme", "dark");
+
+</script>
+
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindQA Animated Landing Page</title>
+     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const player = document.querySelector('lottie-player');
+    
+    player.addEventListener('load', function() {
+        console.log('Lottie animation loaded successfully!');
+    });
+    
+    player.addEventListener('error', function(e) {
+        console.error('Lottie loading error:', e);
+    });
+    
+    player.addEventListener('ready', function() {
+        console.log('Lottie player ready');
+    });
+});
+</script>
+
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body data-bs-theme="light">
+
+
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar" id="mainNav">
+        <div class="container px-4">
+ <a class="navbar-brand" href="#">
+        <img src="images/transparent_logo.png"
+             alt="MindQA Logo"
+             class="logo logo-light">
+
+        <img src="images/Logo.png"
+             alt="MindQA Logo"
+             class="logo logo-dark">
+    </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
+                  
+  <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#who-is-for">For Whom</a></li>
+
+    <li class="mega-dropdown">
+    <a href="#" class="mega-link">Solutions</a>
+    <div class="mega-menu">
+        <div class="mega-inner">
+            <div class="mega-column">
+                <h4>SOLUTIONS</h4>
+                <a href="#">QA Engineers</a>
+                <a href="#">Developers</a>
+                <a href="#">Product Managers</a>
+                <a href="#">Business Analyst</a>
+            </div>
+            </li>
+ 
+ <li class="mega-dropdown">
+    <a href="#" class="mega-link">Resources</a>
+    <div class="mega-menu">
+        <div class="mega-inner">
+
+            <div class="mega-column">
+                <h4>RESOURCES</h4>
+                <a href="#">Case Studies</a>
+                <a href="#">eBooks & Guides</a>
+                <a href="#">Reports & White Papers</a>
+                <a href="#">Webinars & Videos</a>
+                <a href="#">Learn</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>PRODUCT INSIGHTS</h4>
+                <a href="#">Product Tours</a>
+                <a href="#">Trials</a>
+                <a href="#">Product Updates</a>
+                <a href="#">AI-powered Quality</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>EVENTS</h4>
+                <a href="#">MindQA Summit 2025</a>
+                <a href="#">Upcoming Webinars</a>
+                <a href="#">Past Event Highlights</a>
+                <a href="#" class="view-all">View all events →</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>Blog</h4>
+                <a href="#">MindQA Blog</a>
+                <a href="#">White paper</a>
+                <a href="#">Case Study</a>
+                <a href="#" class="view-all">View all →</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Submenu (must stay inside same LI) -->
+    <ul class="mobile-submenu">
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">eBooks & Guides</a></li>
+        <li><a href="#">Reports & White Papers</a></li>
+        <li><a href="#">Webinars & Videos</a></li>
+        <li><a href="#">Learn</a></li>
+
+        <!-- Add other 3 sections too -->
+        <li><strong>PRODUCT INSIGHTS</strong></li>
+        <li><a href="#">Product Tours</a></li>
+        <li><a href="#">Trials</a></li>
+        <li><a href="#">Product Updates</a></li>
+        <li><a href="#">AI-powered Quality</a></li>
+
+        <li><strong>EVENTS</strong></li>
+        <li><a href="#">MindQA Summit 2025</a></li>
+        <li><a href="#">Upcoming Webinars</a></li>
+        <li><a href="#">Past Event Highlights</a></li>
+        <li><a href="#">View all events →</a></li>
+    </ul>
+
+</li>
+
+
+  <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+  <li class="nav-item"><a class="nav-link" href="#docs">Documentation</a></li>
+  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+  
+                   <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
+</ul>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-link text-white theme-toggle me-3" id="themeToggle" title="Toggle Theme">
+                        <i class="bi bi-moon-fill fs-5"></i>
+                    </button>
+                    
+                    <button class="btn btn-outline-light me-2 fw-semibold d-none d-lg-block custom-btn-outline">Log in</button>
+                    <button class="btn btn-success px-3 fw-bold custom-btn-primary">Book Demo</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="hero-section d-flex align-items-center">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                
+                <div class="col-lg-6" data-aos="fade-right">
+                    
+                    <h2 class="typing-container">
+  <span id="typingText"></span><span class="cursor"></span>
+</h2>
+
+                    <h1 class="fw-bold display-5">
+                        Reimagine testing with
+                        <span class="highlight-text  hover-target">Scriptless automation & visual validation</span>
+                    </h1>
+
+                    <p class="text-secondary mt-3 fs-5">
+                        Record real user flows, set visual validations, reuse building blocks
+                        and run scheduled test suites — everything without writing code.
+                    </p>
+
+                    <div class="mt-5 d-flex gap-3">
+                        <button class="btn btn-success btn-lg px-5 py-3 fw-bold custom-btn-primary">
+                            <i class="bi bi-play-circle-fill me-2"></i> Watch Demo
+                        </button>
+                        <button class="btn btn-outline-secondary btn-lg px-4 py-3 fw-bold custom-btn-outline">Learn more</button>
+                    </div>
+                </div>
+
+               <div class="col-lg-6" data-aos="fade">
+    <div class="dashboard-card shadow-lg p-4 position-relative overflow-hidden rounded-4">
+
+        <div class="shine"></div>
+
+        <h6 class="fw-bold mb-3">
+            Test Automation Dashboard
+            <span class="live-indicator">LIVE</span>
+        </h6>
+        <div class="small-bar rounded mb-3"></div>
+
+                        <div class="row g-3">
+                            <div class="col-4">
+                                <div class="mini-card rounded overflow-hidden p-0">
+                                    <img src="images/1.jpg" class="w-100 h-100 object-fit-cover" alt="Visual Test Card" />
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mini-card rounded overflow-hidden p-0">
+                                    <img src="images/2.jpg" class="w-100 h-100 object-fit-cover" alt="Code Metrics Card" />
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mini-card rounded overflow-hidden p-0">
+                                    <img src="images/2.jpg" class="w-100 h-100 object-fit-cover" alt="Report Card" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart-container mt-4">
+                            <img src="images/2.jpg" class="chart-bg" alt="Main Dashboard View" />
+                            <div class="chart-bar"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+<!-- About Us HTML -->
+<section id="about" class="about-section py-5">
+  <div class="container">
+    <h2 class="about-heading text-center mb-4">About Us</h2>
+
+    <p class="about-text">
+      MindQA is a powerful scriptless test automation platform designed to make software testing faster, easier, and more reliable. Our platform enables testers to create and execute automated test cases without writing a single line of code.
+    </p>
+
+    <p class="about-text">
+      We focus on simplifying the automation journey for QA teams by offering intelligent test creation, reusable components, robust execution, and detailed reporting. With MindQA, teams can improve test efficiency, reduce manual efforts, and accelerate product releases.
+    </p>
+
+    <p class="about-text">
+      Whether you're testing web, mobile, or API applications, MindQA provides a seamless experience that adapts to both light and dark themes.
+    </p>
+  </div>
+</section>
+
+
+    <section class="features-section py-5 bg-dark" id="features">
+        <div class="container my-5">
+            <h2 class="text-center fw-bold display-6 mb-3 text-white">
+                Core Features that Propel Your QA
+            </h2>
+            <p class="text-center text-secondary mb-5 fs-5">
+                From self-healing elements to AI-driven reporting, we cover every angle of testing.
+            </p>
+
+            <div class="row g-4 text-center">
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="feature-card p-4 h-100">
+                        <i class="bi bi-cursor-fill display-5 mb-3 highlight"></i>
+                        <h3 class="h4 fw-bold text-white">Scriptless Recording</h3>
+                        <p class="text-secondary">
+                            Capture user interactions directly in the browser. No coding required to build complex test cases.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card p-4 h-100">
+                        <i class="bi bi-robot display-5 mb-3 highlight"></i>
+                        <h3 class="h4 fw-bold text-white">AI Self-Healing</h3>
+                        <p class="text-secondary">
+                           
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card p-4 h-100">
+                        <i class="bi bi-palette-fill display-5 mb-3 highlight"></i>
+                        <h3 class="h4 fw-bold text-white">Smart Validation</h3>
+                        <p class="text-secondary">
+                            MindQA's approach to Smart Test Case Validation extends far beyond simple pass/fail checks. It leverages AI and visual technologies to validate not just the functionality but also the correct appearance and performance of your application.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card p-4 h-100">
+                        <i class="bi bi-browser-safari display-5 mb-3 highlight"></i>
+                        <h3 class="h4 fw-bold text-white">Auto Xpath Identification</h3>
+                        <p class="text-secondary">
+                            When a QA Engineer uses MindQA's scriptless recorder to interact with an element (like clicking a button or filling a field), the platform doesn't just record a single XPath. It simultaneously captures and weights a variety of attributes for that element.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card p-4 h-100">
+                        <img src="images/7.jpg" class="role-icon mb-3" alt="Nightly Test Runs"/>
+                        <h3 class="h4 fw-bold text-white">Record and Playback</h3>
+                        <p class="text-secondary">
+                            Integrate performance checks directly into your functional tests to catch bottlenecks early.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card p-4 h-100">
+                         <img src="images/6.jpg" class="role-icon mb-3" alt="Nightly Test Runs"/>
+                        <h3 class="h4 fw-bold text-white">Nightly Test Runs</h3>
+                        <p class="text-secondary">
+                            Trigger tests automatically with every commit using native integration for tools like Jenkins, GitHub Actions, and GitLab.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="who-is-for-section py-5 bg-dark" id="who-is-for">
+        <div class="container my-5">
+            <h2 class="text-center fw-bold display-6 mb-3 text-white">
+                Who is MindQA For?
+            </h2>
+            <p class="text-center text-secondary mb-5 fs-5">
+                MindQA empowers everyone in the product development lifecycle to deliver quality faster.
+            </p>
+
+            <div class="row g-4 text-center justify-content-center">
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="role-card p-4 h-100">
+                        <img src="images/3.png" class="role-icon mb-3" alt="QA Engineer Icon" />
+                        
+                        <h3 class="h4 fw-bold text-white">QA Engineers</h3>
+                        <p class="text-secondary">
+                            Focus on complex scenarios, not brittle code. Leverage AI for maintenance and scale your test coverage instantly.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="role-card p-4 h-100">
+                        <img src="images/5.jpg" class="role-icon mb-3" alt="Developer Icon" />
+                        
+                        <h3 class="h4 fw-bold text-white">Developers</h3>
+                        <p class="text-secondary">
+                            Shift testing left with seamless integration into your CI/CD pipeline and eliminate end-to-end testing bottlenecks.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="role-card p-4 h-100">
+                        <img src="images/4.jpg" class="role-icon mb-3" alt="Product Manager Icon" />
+                        
+                        <h3 class="h4 fw-bold text-white">Product Managers</h3>
+                        <p class="text-secondary">
+                            Reduce release anxiety. Visualize testing progress and ensure features look and behave exactly as designed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer class="mt-5 pt-5 full-black-footer">
+  <div class="container pb-5">
+    <div class="row">
+
+      <!-- COMPANY -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="fw-bold text-uppercase mb-3">Company</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="about">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Leadership</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Security & Compliance</a></li>
+        </ul>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="fw-bold text-uppercase mb-3">Services</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">QA Consulting</a></li>
+          <li><a href="#">Automation Services</a></li>
+          <li><a href="#">Performance Testing</a></li>
+          <li><a href="#">API Testing</a></li>
+          <li><a href="#">Test Strategy & Planning</a></li>
+        </ul>
+      </div>
+
+      <!-- RESOURCES -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="fw-bold text-uppercase mb-3">Resources</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">eBooks & Guides</a></li>
+          <li><a href="#">Webinars</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">Whitepapers</a></li>
+        </ul>
+      </div>
+
+      <!-- PRODUCTS -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="fw-bold text-uppercase mb-3">Offerings</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">MindQA Platform</a></li>
+          <li><a href="#">AI Test Generation</a></li>
+          <li><a href="#">Automation Dashboard</a></li>
+          <li><a href="#">Quality Analytics</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="col-12 col-md-4 mb-4">
+        <h6 class="fw-bold text-uppercase mb-3">Contact Us</h6>
+        <ul class="list-unstyled footer-links">
+          <li>Email: <a href="#">support@mindqa.com</a></li>
+          <li>Sales: <a href="#">sales@mindqa.com</a></li>
+          <li><br></li>
+          <li>Meet Us @</li>
+        </ul>
+        <div class="dsocial-icon d-flex gap-3">
+          <a class="social-icon" href="#"><i class="bi bi-linkedin"></i></a>
+          <a class="social-icon" href="#"><i class="bi bi-facebook"></i></a>
+          <a class="social-icon" href="#"><i class="bi bi-twitter-x"></i></a>
+          <a class="social-icon" href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div style="background:#0d2a4d; color:#fff;" class="py-3">
+    <div class="container d-flex flex-column flex-md-row justify-content-between text-center">
+      <div>©2025 MindQA. All Rights Reserved</div>
+      <div class="d-flex gap-4 justify-content-center">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms & Conditions</a>
+        <a href="#" class="footer-bottom-link">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+AOS.init({
+    duration: 10,  // Extremely fast animation time
+    easing: 'linear', // Constant speed, no slow-down at the end
+    once: true,
+    offset: 20,    // Trigger animation almost immediately upon scroll
+});
+    
+    // Theme Switching Script
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Function to set the theme based on the attribute
+        function setTheme(theme) {
+            body.setAttribute('data-bs-theme', theme);
+
+            if (themeToggle) {
+                const iconElement = themeToggle.querySelector('i');
+                if (iconElement) {
+                    // If theme is dark, show sun (option to switch to light).
+                    // If theme is light, show moon (option to switch to dark).
+                    iconElement.classList.toggle('bi-moon-fill', theme === 'light');
+                    iconElement.classList.toggle('bi-sun-fill', theme === 'dark');
+
+                    // Update text color for toggle button based on theme
+                    themeToggle.classList.toggle('text-white', theme === 'dark');
+                    themeToggle.classList.toggle('text-dark', theme === 'light');
+                }
+            }
+        }
+
+        // Initialize theme based on body attribute (will be 'light' on load)
+        const initialTheme = body.getAttribute('data-bs-theme') || 'light';
+        setTheme(initialTheme); 
+
+        // Toggle logic
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = body.getAttribute('data-bs-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                setTheme(newTheme);
+            });
+        }
+    });
+</script>
+<script>
+const texts = [
+  "Automate Complex Tests. Write Zero Code.",
+  "Test Smarter. Ship Faster.",
+  "Automate Tests In Minutes — Not Days.",
+  "Intelligent Automation. Faster Report Generation.",
+  "Game Changing Validation Engine.",
+  "End-to-End Coverage: API + Functional testing under one umbrella."
+
+];
+
+let index = 0;
+let charIndex = 0;
+let deleting = false;
+const typingText = document.getElementById("typingText");
+
+function typeEffect() {
+  const currentText = texts[index];
+
+  if (!deleting) {
+    typingText.textContent = currentText.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === currentText.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1200); // Pause before deleting
+      return;
+    }
+  } else {
+    typingText.textContent = currentText.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      deleting = false;
+      index = (index + 1) % texts.length;
+    }
+  }
+
+  setTimeout(typeEffect, deleting ? 60 : 90);
+}
+
+typeEffect();
+</script>
+<script>
+document.querySelector(".mega-link").addEventListener("click", function (e) {
+    if (window.innerWidth < 992) {
+        e.preventDefault();
+
+        const submenu = document.querySelector(".mobile-submenu");
+        submenu.classList.toggle("open");
+    }
+});
+document.body.setAttribute("data-bs-theme", "dark");
+
+</script>
+
+</body>
+>>>>>>> e445ac170fa9ac3dd2ff8c125340b45bd243d4fd
+</html>
